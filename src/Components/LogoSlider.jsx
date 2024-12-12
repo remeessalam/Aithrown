@@ -19,8 +19,28 @@ const LogoSlider = () => {
       s.moveToIdx(s.track.details.abs + 5, true, animation);
     },
     slides: {
-      perView: 7,
+      perView: 5,
       spacing: 10,
+    },
+    breakpoints: {
+      "(max-width: 450px)": {
+        slides: {
+          perView: 2,
+          spacing: 30,
+        },
+      },
+      "(min-width: 1024px)": {
+        slides: {
+          perView: 5,
+          spacing: 30,
+        },
+      },
+      "(min-width: 1280px)": {
+        slides: {
+          perView: 7,
+          spacing: 30,
+        },
+      },
     },
   });
   return (
@@ -40,7 +60,7 @@ const LogoSlider = () => {
           >
             <Link to="#" className="text-white text-2xl font-bold">
               {/* Aithrown */}
-              <img src={logo} alt="logo" className="h-[3rem] sm:h-[4rem]" />
+              <img src={logo} alt="logo" className="h-[4rem]  sm:h-[4rem]" />
             </Link>
           </div>
         ))}
