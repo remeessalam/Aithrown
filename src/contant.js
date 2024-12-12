@@ -22,7 +22,7 @@ import client3 from "./assets/client-3.png";
 import client4 from "./assets/client-4.png";
 
 import service1 from "./assets/service1.png";
-import service2 from "./assets/service2.png";
+// import service2 from "./assets/service2.png";
 import service3 from "./assets/service3.png";
 import service4 from "./assets/service4.png";
 import service5 from "./assets/service5.png";
