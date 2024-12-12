@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import ServiceDetailsBanner from "../Components/ServiceDetailsBanner";
 import { allServices, clientDetails } from "../contant";
 import ScrollToTop from "../Components/ScrollToTop";
+import WhatsAppIcon from "../Components/WhatAppIcon";
 
 const ServicePageLayout = () => {
   const { pathname } = useLocation();
@@ -15,6 +16,7 @@ const ServicePageLayout = () => {
     <>
       <Header />
       <ServiceDetailsBanner />
+      <WhatsAppIcon />
       <ScrollToTop />
       <div className="wrapper">
         <div className="py-[5rem] grid md:grid-cols-[30%_65%] gap-10">

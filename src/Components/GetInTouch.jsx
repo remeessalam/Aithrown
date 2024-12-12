@@ -57,10 +57,11 @@ const GetInTouch = () => {
                   />
                 </div>
                 <div className="">
-                  <label htmlFor="">Phone Number</label>
+                  <label htmlFor="">Phone Number*</label>
                   <input
                     type="tel"
                     className="w-full outline-none p-3 rounded-lg text-black"
+                    required
                     autoComplete="off"
                     placeholder="Enter your phone number"
                   />
