@@ -1,6 +1,6 @@
 import { useKeenSlider } from "keen-slider/react";
 import { Link } from "react-router-dom";
-
+import logo from "../assets/logo/logo.png";
 const animation = { duration: 20000, easing: (t) => t };
 
 const LogoSlider = () => {
@@ -39,7 +39,8 @@ const LogoSlider = () => {
             // style={{ maxWidth: "100px !important" }}
           >
             <Link to="#" className="text-white text-2xl font-bold">
-              Aithrown
+              {/* Aithrown */}
+              <img src={logo} alt="logo" className="h-[3rem] sm:h-[4rem]" />
             </Link>
           </div>
         ))}

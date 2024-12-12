@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import { navItems } from "../contant";
 import { IoMdClose } from "react-icons/io";
-
+import logo from "../assets/logo/logo.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,14 +37,25 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-white text-2xl font-bold">
-              Aithrown
+              <img src={logo} alt="logo" className="h-[3rem] sm:h-[4rem]" />
+              {/* Aithrown */}
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8 text-white">
             {navItems.map((item, index) => (
-              <Link key={index} to={item.path} className={item.extraClasses}>
+              <Link
+                key={index}
+                to={item.path}
+                className={`${item.extraClasses} ${
+                  pathname === item.path && item.path !== "/contact-us"
+                    ? "active-link"
+                    : item.path !== "/contact-us"
+                    ? ""
+                    : ""
+                }`}
+              >
                 {item.label}
               </Link>
             ))}
