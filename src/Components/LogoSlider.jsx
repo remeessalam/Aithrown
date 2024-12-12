@@ -28,7 +28,7 @@ const LogoSlider = () => {
       {" "}
       <div
         ref={sliderRef}
-        className="relative flex  h-fit  my-[5rem]  keen-slider"
+        className="relative flex  h-fit  my-[5rem]  keen-slider bg-white"
       >
         <div className="absolute top-0 left-0 w-28 h-full bg-gradient-to-r from-[#080719] to-transparent pointer-events-none z-10"></div>
 

@@ -5,8 +5,8 @@ import { clientDetails } from "../contant";
 const WhatsAppIcon = () => {
   return (
     <Link
-      className="fixed group bottom-[1.5rem] hover:-translate-y-1 z-30 bg-white rounded-full right-[1.5rem] transition-all duration-200"
-      to={`https://wa.me/${clientDetails.phone}`}
+      className="fixed group bottom-[1.5rem] hover:-translate-y-1 z-30 border border-black bg-white rounded-full right-[1.5rem] transition-all duration-200"
+      to={`https://wa.me/${clientDetails.whatsappbox}`}
       target="_blank"
       aria-label="Contact us on WhatsApp"
     >

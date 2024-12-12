@@ -29,7 +29,8 @@ import service5 from "./assets/service5.png";
 import service6 from "./assets/service6.png";
 import service7 from "./assets/service7.png";
 export const clientDetails = {
-  phone: "+91-00000000",
+  phone: "+91-8547203254",
+  whatsappbox: "8547203254",
   address:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aliquam maxime obcaecati praesentium in",
 };
