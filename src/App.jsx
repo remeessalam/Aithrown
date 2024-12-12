@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import AppLayout from "./Layout/AppLayout";
-import Loader from "./components/Loader";
+import Loader from "./Components/Loader";
 import WebAppDevelopment from "./pages/ServicesPage/WebAppDevelopment";
 import GameDevelopment from "./pages/ServicesPage/GameDevelopment";
 import ArtificialIntelligence from "./pages/ServicesPage/ArtificialIntelligence";
