@@ -3,6 +3,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const GetInTouch = () => {
   const [captchaValue, setCaptchaValue] = useState(null);
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     fullName: "",
     contactNumber: "",
@@ -14,10 +15,42 @@ const GetInTouch = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  // if (!captchaValue) {
-  //   alert("Please complete the CAPTCHA");
-  //   return;
-  // }
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.fullName) newErrors.fullName = "Full name is required.";
+    if (!formData.contactNumber)
+      newErrors.contactNumber = "Contact number is required.";
+    if (!/^\d+$/.test(formData.contactNumber))
+      newErrors.contactNumber = "Contact number must be numeric.";
+    if (!formData.email) newErrors.email = "Email is required.";
+    if (!/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Invalid email format.";
+    if (!formData.subject) newErrors.subject = "Subject is required.";
+    if (!formData.message) newErrors.message = "Message is required.";
+    return newErrors;
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    if (!captchaValue) {
+      alert("Please complete the CAPTCHA");
+      return;
+    }
+    alert("Form submitted successfully!");
+    // Reset form
+    setFormData({
+      fullName: "",
+      contactNumber: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+    setErrors({});
+  };
   return (
     <div id="contact" className="py-[5rem] relative">
       <div className="blurred-red-circle h-[25rem] w-[25rem] bottom-[2rem] right-3 -z-10"></div>
@@ -39,7 +72,8 @@ const GetInTouch = () => {
               Connect With Our Team to Get Started!
             </h2>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              // onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit}
               className="grid grid-cols-1 gap-3 mt-3"
             >
               <div className="grid lg:grid-cols-2 gap-3">
@@ -47,21 +81,31 @@ const GetInTouch = () => {
                   <label htmlFor="">Full Name*</label>
                   <input
                     type="text"
+                    name="fullName"
+                    id="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    placeholder="Enter your Full Name"
                     className="w-full outline-none p-3 rounded-lg text-black"
-                    required
-                    autoComplete="off"
-                    placeholder="Enter your name"
                   />
+                  {errors.fullName && (
+                    <p className="text-red-500 text-sm">{errors.fullName}</p>
+                  )}
                 </div>
                 <div className="">
                   <label htmlFor="">Email*</label>
                   <input
                     type="email"
+                    name="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Enter your mail"
                     className="w-full outline-none p-3 rounded-lg text-black"
-                    required
-                    autoComplete="off"
-                    placeholder="Enter your email"
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm">{errors.email}</p>
+                  )}
                 </div>
               </div>
               <div className="grid lg:grid-cols-2 gap-3">
@@ -69,33 +113,49 @@ const GetInTouch = () => {
                   <label htmlFor="">Subject*</label>
                   <input
                     type="text"
-                    className="w-full outline-none p-3 rounded-lg text-black"
-                    required
-                    autoComplete="off"
+                    name="subject"
+                    id="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     placeholder="Enter subject"
+                    className="w-full outline-none p-3 rounded-lg text-black"
                   />
+                  {errors.subject && (
+                    <p className="text-red-500 text-sm">{errors.subject}</p>
+                  )}
                 </div>
                 <div className="">
                   <label htmlFor="">Phone Number*</label>
                   <input
-                    type="tel"
+                    type="text"
+                    name="contactNumber"
+                    id="contactNumber"
+                    value={formData.contactNumber}
+                    onChange={handleChange}
+                    placeholder="Enter number"
                     className="w-full outline-none p-3 rounded-lg text-black"
-                    required
-                    autoComplete="off"
-                    placeholder="Enter your phone number"
                   />
+                  {errors.contactNumber && (
+                    <p className="text-red-500 text-sm">
+                      {errors.contactNumber}
+                    </p>
+                  )}
                 </div>
               </div>
               <div className="">
                 <label htmlFor="">Message*</label>
                 <textarea
-                  type="text"
-                  rows="4"
-                  placeholder="Enter your message here"
+                  name="message"
+                  id="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows="5"
+                  placeholder="Enter your massage"
                   className="w-full outline-none p-3 rounded-lg text-black"
-                  required
-                  autoComplete="off"
                 />
+                {errors.message && (
+                  <p className="text-red-500 text-sm">{errors.message}</p>
+                )}
               </div>
               <div className="mt-4">
                 <ReCAPTCHA
@@ -103,7 +163,10 @@ const GetInTouch = () => {
                   onChange={(value) => setCaptchaValue(value)}
                 />
               </div>
-              <button className="mt-4 bg-white text-[#433d99] px-5 py-3 rounded-full hover:bg-[#5B3E9A] hover:text-white hover:-translate-y-1 duration-300 transition-all">
+              <button
+                type="submit"
+                className="mt-4 bg-white text-[#433d99] px-5 py-3 rounded-full hover:bg-[#5B3E9A] hover:text-white hover:-translate-y-1 duration-300 transition-all"
+              >
                 Send Message
               </button>
             </form>
