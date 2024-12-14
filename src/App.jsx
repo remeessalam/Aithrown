@@ -8,6 +8,10 @@ import ArtificialIntelligence from "./pages/ServicesPage/ArtificialIntelligence"
 import BlockChain from "./pages/ServicesPage/BlockChain";
 import RPA from "./pages/ServicesPage/RPA";
 import ARAndVR from "./pages/ServicesPage/ARAndVR";
+import IOTDevelopment from "./pages/ServicesPage/IOTDevelopment";
+import DataAnalytics from "./pages/ServicesPage/DataAnalytics";
+import CloudSolutions from "./pages/ServicesPage/CloudSolutions";
+import CyberSecurity from "./pages/ServicesPage/CyberSecurity";
 // import ServicePageLayout from "./Layout/ServicePageLayout";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -76,6 +80,22 @@ const AppRouter = createBrowserRouter([
       {
         path: "ar-vr",
         element: <ARAndVR />,
+      },
+      {
+        path: "iot-development",
+        element: <IOTDevelopment />,
+      },
+      {
+        path: "data-analytics",
+        element: <DataAnalytics />,
+      },
+      {
+        path: "cloud-solutions",
+        element: <CloudSolutions />,
+      },
+      {
+        path: "cybersecurity",
+        element: <CyberSecurity />,
       },
     ],
   },

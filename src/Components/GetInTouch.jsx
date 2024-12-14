@@ -1,4 +1,23 @@
+import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+
 const GetInTouch = () => {
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    contactNumber: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  // if (!captchaValue) {
+  //   alert("Please complete the CAPTCHA");
+  //   return;
+  // }
   return (
     <div id="contact" className="py-[5rem] relative">
       <div className="blurred-red-circle h-[25rem] w-[25rem] bottom-[2rem] right-3 -z-10"></div>
@@ -25,7 +44,7 @@ const GetInTouch = () => {
             >
               <div className="grid lg:grid-cols-2 gap-3">
                 <div className="">
-                  <label htmlFor="">Name*</label>
+                  <label htmlFor="">Full Name*</label>
                   <input
                     type="text"
                     className="w-full outline-none p-3 rounded-lg text-black"
@@ -76,6 +95,12 @@ const GetInTouch = () => {
                   className="w-full outline-none p-3 rounded-lg text-black"
                   required
                   autoComplete="off"
+                />
+              </div>
+              <div className="mt-4">
+                <ReCAPTCHA
+                  sitekey={"6Ld_lZsqAAAAAFeWRvgpMCYO2qNFhOWl9Frkteg6"}
+                  onChange={(value) => setCaptchaValue(value)}
                 />
               </div>
               <button className="mt-4 bg-white text-[#433d99] px-5 py-3 rounded-full hover:bg-[#5B3E9A] hover:text-white hover:-translate-y-1 duration-300 transition-all">

@@ -19,6 +19,7 @@ const HomepageBanner = () => {
               attributes: {
                 style: {
                   objectFit: "cover",
+                  width: "100vw",
                   height: "100vh",
                 },
               },

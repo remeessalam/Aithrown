@@ -9,7 +9,7 @@ const WebAppDevelopment = () => {
         data-aos="fade-up"
         src={img1}
         loading="lazy"
-        className="h-[25rem] object-contain rounded-3xl object-center"
+        className="h-[25rem] object-cover rounded-3xl object-center"
         alt="web and app development"
       />
       <div className="flex flex-col gap-4 md:px-5">

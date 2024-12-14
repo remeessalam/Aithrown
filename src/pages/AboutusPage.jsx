@@ -8,6 +8,7 @@ import sectionthreeimagethree from "../assets/images/sectionthreeimagethree.png"
 import FAQ from "../Components/FAQ";
 import Testimonials from "../Components/Testimonials";
 import ClientsLogoSlider from "../Components/ClientLogoSlider";
+import CompanyAchievements from "../Components/CompanyAchievements";
 const AboutusPage = () => {
   return (
     <div>
@@ -43,6 +44,7 @@ const AboutusPage = () => {
           className="w-full rounded-lg h-[40vh] lg:h-full object-cover"
         />
       </section>
+      <CompanyAchievements />
       <div className="flex justify-center w-full">
         <div className="relative flex justify-center z-10 mt-[51px] px-4">
           <img

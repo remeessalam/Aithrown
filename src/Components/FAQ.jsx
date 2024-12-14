@@ -1,3 +1,5 @@
+import { faqItems } from "../contant";
+
 const FAQ = () => {
   return (
     <div
@@ -12,64 +14,19 @@ const FAQ = () => {
           <br /> questions
         </h2> */}
       </div>
-      <div className="flex flex-col gap-5 mt-10">
-        <div className="flex flex-col gap-5 items-center md:items-start md:flex-row">
-          <div className="flex flex-col w-[90%] md:w-1/2 bg-[#08081b]">
-            <div className="bg-aboutas-gradient h-[.5px]" />
-            <div className=" py-5 px-3">
-              <h4 className="font-medium">How do I get started?</h4>
-              <p className=" text-base text-[#BABCC6]">
-                Simply schedule a free consultation with us to discuss your
-                idea. We will outline how we can help turn your vision into a
-                successful AI company.
-              </p>
+      <div className="mt-10 grid gap-5">
+        {/* Upper Section (Grid with 2 Columns for md and above) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {faqItems.map((faq) => (
+            <div key={faq.id} className="bg-[#08081b] flex flex-col">
+              <div className="bg-aboutas-gradient h-[.5px]" />
+              <div className="py-5 px-3">
+                <h4 className="font-medium">{faq.question}</h4>
+                <p className="text-base text-[#BABCC6]">{faq.answer}</p>
+              </div>
+              <div className="bg-aboutas-gradient h-[.5px]" />
             </div>
-            <div className="bg-aboutas-gradient h-[.5px]" />
-          </div>
-          <div className="flex flex-col w-[90%] md:w-1/2 bg-[#08081b]">
-            <div className="bg-aboutas-gradient h-[.5px]" />
-            <div className=" py-5 px-3">
-              <h4 className="font-medium">
-                Do I need technical knowledge to start an AI company?
-              </h4>
-              <p className="text-base text-[#BABCC6]">
-                No, you don’t need technical expertise. Our team of AI experts
-                will handle the technical aspects while you focus on the
-                business vision and strategy.
-              </p>
-            </div>
-            <div className="bg-aboutas-gradient h-[.5px]" />
-          </div>
-        </div>
-        <div className="flex flex-col gap-5 items-center md:items-start md:flex-row">
-          <div className="flex flex-col w-[90%] md:w-1/2 bg-[#08081b]">
-            <div className="bg-aboutas-gradient h-[.5px]" />
-            <div className=" py-5 px-3">
-              <h4 className="font-medium">
-                How long does it take to launch an AI product?
-              </h4>
-              <p className="text-base text-[#BABCC6]">
-                The timeline varies, but typically it takes 3 to 6 months to
-                develop a Minimum Viable Product (MVP) and begin the launch
-                process.
-              </p>
-            </div>
-            <div className="bg-aboutas-gradient h-[.5px]" />
-          </div>
-          <div className="flex flex-col w-[90%] md:w-1/2 bg-[#08081b]">
-            <div className="bg-aboutas-gradient h-[.5px]" />
-            <div className=" py-5 px-3">
-              <h4 className="font-medium">
-                How do I know if my AI idea is feasible?
-              </h4>
-              <p className="text-base text-[#BABCC6]">
-                We offer an initial consultation to evaluate your idea&rsquo;s
-                feasibility, its market potential, and provide feedback on how
-                to refine it for success.
-              </p>
-            </div>
-            <div className="bg-aboutas-gradient h-[.5px]" />
-          </div>
+          ))}
         </div>
       </div>
     </div>

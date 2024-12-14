@@ -28,11 +28,14 @@ import service4 from "./assets/service4.png";
 import service5 from "./assets/service5.png";
 import service6 from "./assets/service6.png";
 import service7 from "./assets/service7.png";
+import service8 from "./assets/service8.png";
+import service9 from "./assets/service9.png";
+import service10 from "./assets/service10.png";
+import service11 from "./assets/service11.png";
 export const clientDetails = {
   phone: "+91-8547203254",
   whatsappbox: "8547203254",
-  address:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aliquam maxime obcaecati praesentium in",
+  address: "Kerala, India",
 };
 
 export const navItems = [
@@ -129,6 +132,46 @@ export const allServices = [
     smallPara:
       "Game Development is an exciting and dynamic field that combines creativity, storytelling, and cutting-edge technology to create interactive experiences. From casual mobile games to expansive multiplayer universes, game development encompasses a wide range of platforms and genres, catering to diverse audiences worldwide.\n\n" +
       "The process of game development involves multiple stages, including concept design, programming, asset creation, and testing. Developers use powerful game engines like Unity and Unreal Engine to build visually stunning and performance-optimized games. With the integration of AI, augmented reality (AR), and virtual reality (VR), modern games are becoming more immersive and adaptive, providing players with unique and personalized experiences. Game development continues to push the boundaries of entertainment, merging technology and artistry to captivate players globally.",
+  },
+  {
+    id: 7,
+    img: service8,
+    title: "IoT Development",
+    description:
+      "Empowering businesses with connected solutions to revolutionize operations and user experiences.",
+    link: "/services/iot-development",
+    smallPara:
+      "Internet of Things (IoT) development is at the forefront of digital transformation, enabling businesses to connect devices, systems, and people seamlessly. IoT applications range from smart home devices to industrial automation, providing real-time data insights and control over physical and digital systems.\n\n IoT development involves the integration of sensors, connectivity, and analytics platforms to build systems that enhance efficiency, improve decision-making, and create new revenue opportunities. By leveraging IoT technology, businesses can innovate and thrive in a connected world.",
+  },
+  {
+    id: 8,
+    img: service9,
+    title: "Data Analytics",
+    description:
+      "Transforming data into actionable insights to drive strategic decisions.",
+    link: "/services/data-analytics",
+    smallPara:
+      "Data Analytics is a powerful tool for extracting meaningful insights from raw data. Through techniques like descriptive, predictive, and prescriptive analytics, businesses can understand trends, anticipate outcomes, and optimize strategies.\n\n Data analytics development involves leveraging tools like machine learning, data visualization, and big data processing to uncover hidden patterns and opportunities. By making data-driven decisions, organizations can improve efficiency, enhance customer experiences, and achieve their goals with greater precision.",
+  },
+  {
+    id: 9,
+    img: service10,
+    title: "Cloud Solutions",
+    description:
+      "Providing scalable, secure, and cost-effective cloud solutions for modern businesses.",
+    link: "/services/cloud-solutions",
+    smallPara:
+      "Cloud solutions enable businesses to store, manage, and process data on scalable, on-demand infrastructures. By adopting cloud computing, organizations can reduce IT costs, enhance flexibility, and improve collaboration.\n\n Cloud solutions development focuses on designing and deploying services such as Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS), and Software-as-a-Service (SaaS). These solutions ensure reliability, security, and accessibility, empowering businesses to innovate without limitations.",
+  },
+  {
+    id: 10,
+    img: service11,
+    title: "Cybersecurity",
+    description:
+      "Safeguarding digital assets and ensuring data integrity against evolving cyber threats.",
+    link: "/services/cybersecurity",
+    smallPara:
+      "Cybersecurity is an essential practice to protect sensitive information, systems, and networks from cyberattacks. With the increasing complexity of threats, cybersecurity development involves creating robust defense mechanisms, intrusion detection systems, and encryption protocols.\n\n By implementing comprehensive security measures, businesses can ensure data privacy, comply with regulations, and maintain trust with customers and stakeholders. Cybersecurity solutions are vital for safeguarding against financial losses and reputational damage in an ever-evolving digital landscape.",
   },
 ];
 
@@ -317,5 +360,88 @@ export const clients = [
   {
     id: 4,
     img: client4,
+  },
+];
+
+export const faqItems = [
+  {
+    id: 1,
+    question: "How can I get in touch with Aithrown.?",
+    answer: `You can reach out to us through the contact form on this page, or by emailing us directly at info@volloinc.com. Alternatively, you can also call us at +91-6300021466 for immediate assistance.`,
+  },
+  {
+    id: 2,
+    question: "How long will it take for someone to respond to my inquiry?",
+    answer: `We aim to respond to all inquiries within 24–48 hours on business days. If you need urgent assistance, please indicate so in your message, and we’ll prioritize your request.`,
+  },
+  {
+    id: 3,
+    question: "What types of services does Aithrown. offer?",
+    answer: `Aithrown. offers a wide range of services including:
+      - Artificial Intelligence (AI)
+      - Mobile App Development
+      - Website Development
+      - UI/UX Design
+      - Custom Software Development
+      - Data Analytics
+      - Internet of Things (IoT)
+      - Robotic Process Automation (RPA)
+      - Augmented Reality (AR) & Virtual Reality (VR)
+      - Game Development
+      - Blockchain Solutions
+      - Cloud Services
+      - Cybersecurity
+    For more detailed information, please visit our Services page.`,
+  },
+  {
+    id: 4,
+    question: "How do I schedule a consultation or meeting with Aithrown.?",
+    answer: `You can schedule a meeting by filling out the contact form on this page or by sending us an email at <strong>info@volloinc.com</strong>. We’ll get back to you with available time slots.`,
+  },
+  {
+    id: 5,
+    question: "Do you offer support for ongoing projects?",
+    answer: `Yes, we provide support for all ongoing projects. Whether you need help with updates, maintenance, or troubleshooting, our team is ready to assist you.`,
+  },
+  {
+    id: 6,
+    question: "Can I request a quote for a specific service?",
+    answer: `Yes, we provide custom quotes based on your requirements. Please fill out the contact form with details about the service you need, and we’ll send you an estimate as soon as possible.`,
+  },
+  {
+    id: 7,
+    question: "Do you offer free consultations?",
+    answer: `Yes, we offer a free initial consultation to better understand your needs and discuss potential solutions. Reach out to schedule your consultation!`,
+  },
+  {
+    id: 8,
+    question: "Where is Aithrown. located?",
+    answer: `Aithrown. operates remotely, and our team works from various locations around the world. We’re fully capable of supporting clients globally.`,
+  },
+  {
+    id: 9,
+    question: "What industries do you specialize in?",
+    answer: `Aithrown. has worked with clients across multiple industries, including:
+      - Tech
+      - Healthcare
+      - Finance
+      - Retail
+      - Entertainment
+    We tailor our solutions to fit the unique needs of each industry.`,
+  },
+  {
+    id: 10,
+    question: "Can I work with Aithrown. from any country?",
+    answer: `Absolutely! Aithrown. works with clients globally. Thanks to our remote setup, we are able to serve businesses in different time zones and regions efficiently.`,
+  },
+  {
+    id: 11,
+    question: "How do I track the progress of my project with Aithrown.?",
+    answer: `We provide regular project updates through email, meetings, or our project management platform. You will have access to track the status and milestones of your project.`,
+  },
+  {
+    id: 12,
+    question: "What makes Aithrown. different from other companies?",
+    answer: `At Aithrown., we focus on delivering cutting-edge, custom solutions tailored to your business needs. Our approach combines deep industry expertise with a focus on innovation and customer satisfaction, ensuring we always exceed expectations.`,
   },
 ];
