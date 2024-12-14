@@ -367,7 +367,7 @@ export const faqItems = [
   {
     id: 1,
     question: "How can I get in touch with Aithrown.?",
-    answer: `You can reach out to us through the contact form on this page, or by emailing us directly at info@volloinc.com. Alternatively, you can also call us at +91-6300021466 for immediate assistance.`,
+    answer: `You can reach out to us through the contact form on this page, or by emailing us directly at info@example.com. Alternatively, you can also call us at +91-8547203254 for immediate assistance.`,
   },
   {
     id: 2,
@@ -396,7 +396,7 @@ export const faqItems = [
   {
     id: 4,
     question: "How do I schedule a consultation or meeting with Aithrown.?",
-    answer: `You can schedule a meeting by filling out the contact form on this page or by sending us an email at <strong>info@volloinc.com</strong>. We’ll get back to you with available time slots.`,
+    answer: `You can schedule a meeting by filling out the contact form on this page or by sending us an email at <strong>info@example.com</strong>. We’ll get back to you with available time slots.`,
   },
   {
     id: 5,
