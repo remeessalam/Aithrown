@@ -5,6 +5,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { GrFacebookOption } from "react-icons/gr";
 import { allServices } from "../contant";
+import logo from "../assets/logo/logo.png";
 
 const Footer = () => {
   return (
@@ -19,7 +20,8 @@ const Footer = () => {
           /> */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-white text-2xl font-bold">
-              Aithrown
+              <img src={logo} alt="logo" className="h-[3rem] sm:h-[4rem]" />
+              {/* Aithrown */}
             </Link>
           </div>
           <p className="max-w-[25rem]">
