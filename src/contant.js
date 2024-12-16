@@ -35,6 +35,7 @@ import service11 from "./assets/service11.png";
 export const clientDetails = {
   phone: "+91-8547203254",
   whatsappbox: "8547203254",
+  email: "contactaithrown@gmail.com",
   address: "Kerala, India",
 };
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import { clientDetails } from "../contant";
 
 const GetInTouch = () => {
   const {
@@ -38,7 +39,8 @@ const GetInTouch = () => {
     emailBody += "Phone:\n" + data.contactNumber;
 
     const payload = {
-      to: "remeesreme4u@gmail.com",
+      to: clientDetails.email,
+      // to: "remeesreme4u@gmail.com",
       subject: "You have a new message from Aithrown",
       body: emailBody,
     };
