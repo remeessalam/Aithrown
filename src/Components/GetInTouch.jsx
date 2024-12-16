@@ -26,6 +26,8 @@ const GetInTouch = () => {
     // No need to validate email manually here
     if (parseInt(captchaAnswer) !== correctAnswer) {
       toast.error("Incorrect CAPTCHA answer");
+      setSending(false);
+
       return;
     }
 
@@ -62,6 +64,7 @@ const GetInTouch = () => {
       } else {
         const errorData = await response.json();
         toast.error(errorData.message || "Failed to send email");
+        setSending(false);
       }
     } catch (err) {
       toast.error("An error occurred. Please try again.");
