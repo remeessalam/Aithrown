@@ -5,7 +5,7 @@ import { clientDetails } from "../contant";
 const WhatsAppIcon = () => {
   return (
     <a
-      className="fixed group bottom-[1.5rem] hover:-translate-y-1 z-30 border border-black bg-white rounded-full right-[1.5rem] transition-all duration-200"
+      className="fixed group bottom-[5.5rem] hover:-translate-y-1 z-30 border border-black bg-white rounded-full right-[1.5rem] transition-all duration-200"
       href={`https://api.whatsapp.com/send/?phone=918547203254&text&type=phone_number&app_absent=0&wame_ctl=1`}
       target="_blank"
       rel="noopener noreferrer"
