@@ -12,6 +12,7 @@ import IOTDevelopment from "./pages/ServicesPage/IOTDevelopment";
 import DataAnalytics from "./pages/ServicesPage/DataAnalytics";
 import CloudSolutions from "./pages/ServicesPage/CloudSolutions";
 import CyberSecurity from "./pages/ServicesPage/CyberSecurity";
+import { Toaster } from "react-hot-toast";
 // import ServicePageLayout from "./Layout/ServicePageLayout";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -27,6 +28,16 @@ const AppRouter = createBrowserRouter([
     path: "/",
     element: (
       <Suspense fallback={<Loader />}>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            style: {
+              background: "#000000",
+              color: "#ffffff",
+            },
+          }}
+        />
         <AppLayout />
       </Suspense>
     ),

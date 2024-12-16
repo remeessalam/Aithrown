@@ -1,56 +1,75 @@
 import { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const GetInTouch = () => {
-  const [captchaValue, setCaptchaValue] = useState(null);
-  const [errors, setErrors] = useState({});
-  const [formData, setFormData] = useState({
-    fullName: "",
-    contactNumber: "",
-    email: "",
-    subject: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+  const [captchaAnswer, setCaptchaAnswer] = useState("");
+  const [captchaQuestion, setCaptchaQuestion] = useState({
+    num1: Math.floor(Math.random() * 10),
+    num2: Math.floor(Math.random() * 10),
   });
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const [send, setSending] = useState(false);
+  const correctAnswer = captchaQuestion.num1 + captchaQuestion.num2;
+
+  const handleCaptchaChange = (e) => {
+    setCaptchaAnswer(e.target.value);
   };
-  const validate = () => {
-    const newErrors = {};
-    if (!formData.fullName) newErrors.fullName = "Full name is required.";
-    if (!formData.contactNumber)
-      newErrors.contactNumber = "Contact number is required.";
-    if (!/^\d+$/.test(formData.contactNumber))
-      newErrors.contactNumber = "Contact number must be numeric.";
-    if (!formData.email) newErrors.email = "Email is required.";
-    if (!/\S+@\S+\.\S+/.test(formData.email))
-      newErrors.email = "Invalid email format.";
-    if (!formData.subject) newErrors.subject = "Subject is required.";
-    if (!formData.message) newErrors.message = "Message is required.";
-    return newErrors;
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
+
+  const onSubmit = async (data) => {
+    setSending(true);
+    // No need to validate email manually here
+    if (parseInt(captchaAnswer) !== correctAnswer) {
+      toast.error("Incorrect CAPTCHA answer");
       return;
     }
-    if (!captchaValue) {
-      alert("Please complete the CAPTCHA");
-      return;
+
+    var emailBody = "Name: " + data.fullName + "\n\n";
+    emailBody += "Email: " + data.email + "\n\n";
+    emailBody += "Subject: " + data.subject + "\n\n";
+    emailBody += "Message:\n" + data.message;
+    emailBody += "Phone:\n" + data.contactNumber;
+
+    const payload = {
+      to: "remeesreme4u@gmail.com",
+      subject: "You have a new message from Aithrown",
+      body: emailBody,
+    };
+
+    try {
+      const response = await fetch(
+        "https://smtp-api-tawny.vercel.app/send-email",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (response.ok) {
+        toast.success("Email sent successfully");
+        reset();
+        setCaptchaAnswer("");
+        setCaptchaQuestion({
+          num1: Math.floor(Math.random() * 10),
+          num2: Math.floor(Math.random() * 10),
+        });
+      } else {
+        const errorData = await response.json();
+        toast.error(errorData.message || "Failed to send email");
+      }
+    } catch (err) {
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setSending(false);
     }
-    alert("Form submitted successfully!");
-    // Reset form
-    setFormData({
-      fullName: "",
-      contactNumber: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-    setErrors({});
   };
+
   return (
     <div id="contact" className="py-[5rem] relative">
       <div className="blurred-red-circle h-[25rem] w-[25rem] bottom-[2rem] right-3 -z-10"></div>
@@ -72,8 +91,7 @@ const GetInTouch = () => {
               Connect With Our Team to Get Started!
             </h2>
             <form
-              // onSubmit={(e) => e.preventDefault()}
-              onSubmit={handleSubmit}
+              onSubmit={handleSubmit(onSubmit)}
               className="grid grid-cols-1 gap-3 mt-3"
             >
               <div className="grid lg:grid-cols-2 gap-3">
@@ -83,13 +101,16 @@ const GetInTouch = () => {
                     type="text"
                     name="fullName"
                     id="fullName"
-                    value={formData.fullName}
-                    onChange={handleChange}
+                    {...register("fullName", {
+                      required: "Full name is required.",
+                    })}
                     placeholder="Enter your Full Name"
                     className="w-full outline-none p-3 rounded-lg text-black"
                   />
                   {errors.fullName && (
-                    <p className="text-red-500 text-sm">{errors.fullName}</p>
+                    <p className="text-red-500 text-sm">
+                      {errors.fullName.message}
+                    </p>
                   )}
                 </div>
                 <div className="">
@@ -98,13 +119,20 @@ const GetInTouch = () => {
                     type="email"
                     name="email"
                     id="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    {...register("email", {
+                      required: "Email is required.",
+                      pattern: {
+                        value: /\S+@\S+\.\S+/,
+                        message: "Invalid email format.",
+                      },
+                    })}
                     placeholder="Enter your mail"
                     className="w-full outline-none p-3 rounded-lg text-black"
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-sm">{errors.email}</p>
+                    <p className="text-red-500 text-sm">
+                      {errors.email.message}
+                    </p>
                   )}
                 </div>
               </div>
@@ -115,13 +143,16 @@ const GetInTouch = () => {
                     type="text"
                     name="subject"
                     id="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
+                    {...register("subject", {
+                      required: "Subject is required.",
+                    })}
                     placeholder="Enter subject"
                     className="w-full outline-none p-3 rounded-lg text-black"
                   />
                   {errors.subject && (
-                    <p className="text-red-500 text-sm">{errors.subject}</p>
+                    <p className="text-red-500 text-sm">
+                      {errors.subject.message}
+                    </p>
                   )}
                 </div>
                 <div className="">
@@ -130,14 +161,19 @@ const GetInTouch = () => {
                     type="text"
                     name="contactNumber"
                     id="contactNumber"
-                    value={formData.contactNumber}
-                    onChange={handleChange}
+                    {...register("contactNumber", {
+                      required: "Contact number is required.",
+                      pattern: {
+                        value: /^\d+$/,
+                        message: "Contact number must be numeric.",
+                      },
+                    })}
                     placeholder="Enter number"
                     className="w-full outline-none p-3 rounded-lg text-black"
                   />
                   {errors.contactNumber && (
                     <p className="text-red-500 text-sm">
-                      {errors.contactNumber}
+                      {errors.contactNumber.message}
                     </p>
                   )}
                 </div>
@@ -147,27 +183,37 @@ const GetInTouch = () => {
                 <textarea
                   name="message"
                   id="message"
-                  value={formData.message}
-                  onChange={handleChange}
+                  {...register("message", { required: "Message is required." })}
                   rows="5"
-                  placeholder="Enter your massage"
+                  placeholder="Enter your message"
                   className="w-full outline-none p-3 rounded-lg text-black"
                 />
                 {errors.message && (
-                  <p className="text-red-500 text-sm">{errors.message}</p>
+                  <p className="text-red-500 text-sm">
+                    {errors.message.message}
+                  </p>
                 )}
               </div>
+
               <div className="mt-4">
-                <ReCAPTCHA
-                  sitekey={"6Ld_lZsqAAAAAFeWRvgpMCYO2qNFhOWl9Frkteg6"}
-                  onChange={(value) => setCaptchaValue(value)}
+                {/* CAPTCHA question */}
+                <label>
+                  What is {captchaQuestion.num1} + {captchaQuestion.num2}?
+                </label>
+                <input
+                  type="text"
+                  value={captchaAnswer}
+                  onChange={handleCaptchaChange}
+                  placeholder="Enter the answer"
+                  className="w-full outline-none p-3 rounded-lg text-black"
                 />
               </div>
+
               <button
                 type="submit"
                 className="mt-4 bg-white text-[#433d99] px-5 py-3 rounded-full hover:bg-[#5B3E9A] hover:text-white hover:-translate-y-1 duration-300 transition-all"
               >
-                Send Message
+                {send ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
