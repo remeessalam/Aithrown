@@ -13,6 +13,7 @@ import DataAnalytics from "./pages/ServicesPage/DataAnalytics";
 import CloudSolutions from "./pages/ServicesPage/CloudSolutions";
 import CyberSecurity from "./pages/ServicesPage/CyberSecurity";
 import { Toaster } from "react-hot-toast";
+import BlogPage from "./pages/BlogPage";
 // import ServicePageLayout from "./Layout/ServicePageLayout";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -61,6 +62,10 @@ const AppRouter = createBrowserRouter([
       {
         path: "/contact-us",
         element: <ContactPage />,
+      },
+      {
+        path: "/blogs",
+        element: <BlogPage />,
       },
     ],
   },

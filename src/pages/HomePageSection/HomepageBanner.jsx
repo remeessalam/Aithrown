@@ -1,5 +1,6 @@
 import ReactPlayer from "react-player";
 import video from "../../assets/video/homeBanner.mp4";
+import { Link } from "react-router-dom";
 const HomepageBanner = () => {
   return (
     <div className="relative min-h-screen flex justify-center items-center">
@@ -42,7 +43,7 @@ const HomepageBanner = () => {
             Experience the future of technology today.
           </p>
           <button className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors duration-300">
-            Consult Our Experts
+            <Link to={"/contact-us"}>Consult Our Experts</Link>
           </button>
         </div>
       </div>

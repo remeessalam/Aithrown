@@ -56,7 +56,7 @@ export const navItems = [
   },
   {
     label: "BLOGS",
-    // path: "/industries",
+    path: "/blogs",
     extraClasses: "hover:text-blue-400",
   },
   // { label: "PORTFOLIO", path: "/portfolio", extraClasses: "hover:text-blue-400" },
@@ -444,5 +444,56 @@ export const faqItems = [
     id: 12,
     question: "What makes Aithrown. different from other companies?",
     answer: `At Aithrown., we focus on delivering cutting-edge, custom solutions tailored to your business needs. Our approach combines deep industry expertise with a focus on innovation and customer satisfaction, ensuring we always exceed expectations.`,
+  },
+];
+
+export const blogsLinks = [
+  {
+    link: "http://aithrown.blogspot.com/2024/12/what-is-ai-and-how-can-it-transform.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2024/12/how-predictive-analytics-can-give-your.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2024/12/top-ai-trends-in-2024-and-what-they.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2024/12/how-healthcare-providers-can-begin.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2024/12/personalized-learning-revolutionizing.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2024/12/student-support-enhance-well-being-with.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2024/12/special-education-empower-every-student.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2024/12/content-creation-automate-lesson-plans.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2024/12/parent-teacher-collaboration-strengthen.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2024/12/security-ensure-student-safety-with.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2024/12/transforming-education-how-aithrown.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2025/01/unlocking-creativity-and-innovation-how.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2025/01/elevate-your-digital-presence-with.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2025/01/why-every-salon-makeover-studio-needs.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2025/01/why-every-salon-makeover-studio-needs_3.html",
+  },
+  {
+    link: "http://aithrown.blogspot.com/2025/01/streamline-your-restaurant-operations.html",
   },
 ];
