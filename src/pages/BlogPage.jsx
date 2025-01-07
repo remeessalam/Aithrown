@@ -9,14 +9,14 @@ const BlogPage = () => {
       <div className="grid wrapper lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 py-[5rem]">
         {blogsLinks.map((obj, i) => (
           <Link key={i} to={obj.link} className=" group">
-            <div className="flex flex-col bg-gradient-to-r rounded-lg overflow-clip justify-center items-center from-blue-400 hover:from-blue-500 to-sky-500 hover:to-sky-600">
+            <div className="flex flex-col bg-[#0458F6] rounded-lg overflow-clip justify-center items-center ">
               <img
                 src={blogimg}
                 alt="blogimg"
                 className=" h-full w-full left-0 top-0 object-cover group-hover:scale-105 transition-all duration-300"
               />
               <div className="p-4">
-                <h4 className=" text-white font-bold text-3xl hover:text-4xl transition-all duration-300  ">
+                <h4 className=" text-white font-bold text-3xl  transition-all duration-300  ">
                   {" "}
                   Blog {i + 1}
                 </h4>
