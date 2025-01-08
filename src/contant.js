@@ -450,50 +450,66 @@ export const faqItems = [
 export const blogsLinks = [
   {
     link: "http://aithrown.blogspot.com/2024/12/what-is-ai-and-how-can-it-transform.html",
+    desc: " Artificial Intelligence (AI) is no longer just a buzzword—it’s a transformative force reshaping industries worldwide. ",
   },
   {
     link: "http://aithrown.blogspot.com/2024/12/how-predictive-analytics-can-give-your.html",
+    desc: "At Aithrown, we specialize in crafting predictive analytics solutions that unlock the potential of your data, giving your business the insight it needs to thrive.",
   },
   {
     link: "http://aithrown.blogspot.com/2024/12/top-ai-trends-in-2024-and-what-they.html",
+    desc: "At Aithrown, we help businesses navigate and leverage these trends to stay competitive.",
   },
   {
     link: "http://aithrown.blogspot.com/2024/12/how-healthcare-providers-can-begin.html",
+    desc: "At Aithrown, we specialize in helping healthcare providers embrace AI, creating tailored solutions to address their unique challenges and goals. Here’s how you can get started",
   },
   {
     link: "http://aithrown.blogspot.com/2024/12/personalized-learning-revolutionizing.html",
+    desc: " In today’s fast-paced world, education must evolve to meet the diverse needs of every student. Traditional teaching methods often struggle to address individual learning differences, leading to gaps in understanding and engagement. This is where Aithrown comes in. Our cutting-edge AI-powered solutions are transforming personalized learning, creating a dynamic and inclusive educational experience for students and a competitive advantage for schools.",
   },
   {
     link: "http://aithrown.blogspot.com/2024/12/student-support-enhance-well-being-with.html",
+    desc: "This is where Aithrown’s AI-powered chatbots come into play, offering round-the-clock support to enhance the student experience and create a thriving school environment.",
   },
   {
     link: "http://aithrown.blogspot.com/2024/12/special-education-empower-every-student.html",
+    desc: " Aithrown is at the forefront of this transformation, offering powerful assistive tools designed to empower special education students and redefine what’s possible in the classroom.",
   },
   {
     link: "http://aithrown.blogspot.com/2024/12/content-creation-automate-lesson-plans.html",
+    desc: "Aithrown brings cutting-edge AI solutions to schools, enabling the automation of lesson planning and digital resource creation, giving teachers more time to focus on what matters most—teaching.",
   },
   {
     link: "http://aithrown.blogspot.com/2024/12/parent-teacher-collaboration-strengthen.html",
+    desc: "Aithrown addresses this challenge with AI-powered dashboards that revolutionize parent-teacher collaboration, ensuring a seamless flow of information and stronger partnerships.",
   },
   {
     link: "http://aithrown.blogspot.com/2024/12/security-ensure-student-safety-with.html",
+    desc: " In today’s world, student safety is a top priority for every school. While education focuses on academic excellence, ensuring a secure environment is critical to fostering trust among parents, students, and staff. Traditional security measures often fall short in addressing modern challenges, but AI-powered solutions from Aithrown are here to bridge the gap. With advanced surveillance and emergency response tools, Aithrown helps schools create a safe and protected space for learning.",
   },
   {
     link: "http://aithrown.blogspot.com/2024/12/transforming-education-how-aithrown.html",
+    desc: "Aithrown is at the forefront of this transformation, offering comprehensive AI-driven services that revolutionize education, streamline operations, and set schools apart as leaders in their field.",
   },
   {
     link: "http://aithrown.blogspot.com/2025/01/unlocking-creativity-and-innovation-how.html",
+    desc: "At Aithrown, we are at the forefront of this revolution, empowering businesses to harness the full potential of generative AI to drive growth and innovation.",
   },
   {
     link: "http://aithrown.blogspot.com/2025/01/elevate-your-digital-presence-with.html",
+    desc: "At Aithrown, we specialize in seamlessly integrating AI into web development, delivering solutions that enhance user engagement, streamline operations, and drive business growth.",
   },
   {
     link: "http://aithrown.blogspot.com/2025/01/why-every-salon-makeover-studio-needs.html",
+    desc: "At Aithrown, we specialize in helping businesses harness the power of digital transformation through AI-driven solutions. With AppGalaxy, our subsidiary dedicated to premium website and app development, we can craft tailor-made websites designed to elevate your salon's brand and revenue.",
   },
   {
     link: "http://aithrown.blogspot.com/2025/01/why-every-salon-makeover-studio-needs_3.html",
+    desc: "At Aithrown, we specialize in cutting-edge AI-driven solutions to help businesses thrive in the digital era. Through AppGalaxy, our subsidiary focused exclusively on premium app and website development, we deliver custom mobile apps designed to elevate your salon’s services and customer experience.",
   },
   {
     link: "http://aithrown.blogspot.com/2025/01/streamline-your-restaurant-operations.html",
+    desc: "At Aithrown, our AI-driven solutions redefine efficiency, and with our subsidiary Appgalaxy, we provide comprehensive restaurant management software designed to meet the needs of modern restaurants.",
   },
 ];
