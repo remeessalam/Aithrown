@@ -32,6 +32,23 @@ import service8 from "./assets/service8.png";
 import service9 from "./assets/service9.png";
 import service10 from "./assets/service10.png";
 import service11 from "./assets/service11.png";
+//blog images
+import blog1 from "./assets/blogs/blog1.jpeg";
+import blog2 from "./assets/blogs/blog2.jpg";
+import blog3 from "./assets/blogs/blog3.jpg";
+import blog4 from "./assets/blogs/blog4.jpg";
+import blog5 from "./assets/blogs/blog5.jpg";
+import blog6 from "./assets/blogs/blog6.jpg";
+import blog7 from "./assets/blogs/blog7.jpg";
+import blog8 from "./assets/blogs/blog8.jpg";
+import blog9 from "./assets/blogs/blog9.jpg";
+import blog10 from "./assets/blogs/blog10.jpg";
+import blog11 from "./assets/blogs/blog11.jpg";
+import blog12 from "./assets/blogs/blog12.jpg";
+import blog13 from "./assets/blogs/blog13.jpg";
+import blog14 from "./assets/blogs/blog14.jpg";
+import blog15 from "./assets/blogs/blog15.jpg";
+import blog16 from "./assets/blogs/blog16.jpg";
 export const clientDetails = {
   phone: "+91-8547203254",
   whatsappbox: "8547203254",
@@ -293,7 +310,7 @@ export const testimonials = [
     name: "Rohan Sharma",
     title: "CEO of ShopSmart Pvt Ltd",
     description:
-      "Working with [Your Company Name] was a game-changer for our e-commerce business. We needed a mobile app that could handle a large inventory and ensure a seamless shopping experience for our customers. [Your Company Name] not only delivered a user-friendly app for both Android and iOS but also integrated real-time inventory management and personalized recommendations using AI algorithms. Their team was incredibly responsive and flexible, making adjustments based on our feedback at every stage of development.",
+      "Working with Aithrown was a game-changer for our e-commerce business. We needed a mobile app that could handle a large inventory and ensure a seamless shopping experience for our customers. Aithrown not only delivered a user-friendly app for both Android and iOS but also integrated real-time inventory management and personalized recommendations using AI algorithms. Their team was incredibly responsive and flexible, making adjustments based on our feedback at every stage of development.",
   },
   {
     id: 2,
@@ -301,7 +318,7 @@ export const testimonials = [
     name: "Priya Bansal",
     title: "Managing Director of SafeFunds Financial Group",
     description:
-      "As a financial services company, we required a blockchain solution to improve transparency and security for our clients. We approached [Your Company Name] with a complex set of requirements involving smart contracts, secure transaction tracking, and decentralized data storage. Their team impressed us with their in-depth knowledge of blockchain technology and ability to explain complex concepts in simple terms. From initial consultation to the final implementation, [Your Company Name] was professional, efficient, and very detail-oriented.",
+      "As a financial services company, we required a blockchain solution to improve transparency and security for our clients. We approached Aithrown with a complex set of requirements involving smart contracts, secure transaction tracking, and decentralized data storage. Their team impressed us with their in-depth knowledge of blockchain technology and ability to explain complex concepts in simple terms. From initial consultation to the final implementation, Aithrown was professional, efficient, and very detail-oriented.",
   },
   {
     id: 3,
@@ -309,7 +326,7 @@ export const testimonials = [
     name: "Vikram Rao",
     title: "Operations Manager at FreshMart Retail Solutions",
     description:
-      "We wanted to leverage AI to enhance our retail analytics capabilities, but we had no idea where to start. [Your Company Name] provided a comprehensive solution that included everything from customer behavior analysis to predictive modeling. They created an AI-driven platform that analyzed real-time customer data and provided actionable insights on purchasing trends, inventory optimization, and personalized marketing strategies.",
+      "We wanted to leverage AI to enhance our retail analytics capabilities, but we had no idea where to start. Aithrown provided a comprehensive solution that included everything from customer behavior analysis to predictive modeling. They created an AI-driven platform that analyzed real-time customer data and provided actionable insights on purchasing trends, inventory optimization, and personalized marketing strategies.",
   },
   {
     id: 4,
@@ -317,7 +334,7 @@ export const testimonials = [
     name: "Dr. Meera Nair",
     title: "Co-Founder of HealthNet Solutions",
     description:
-      "Since implementing their solution, we have seen a significant improvement in data security, with no incidents of breaches or unauthorized access. Our clients and patients feel more confident knowing that their data is protected with cutting-edge technology. [Your Company Name]'s attention to detail and ongoing support has been invaluable, making them our go-to partner for all things cybersecurity.",
+      "Since implementing their solution, we have seen a significant improvement in data security, with no incidents of breaches or unauthorized access. Our clients and patients feel more confident knowing that their data is protected with cutting-edge technology. Aithrown's attention to detail and ongoing support has been invaluable, making them our go-to partner for all things cybersecurity.",
   },
   {
     id: 5,
@@ -325,7 +342,7 @@ export const testimonials = [
     name: "Anjali Deshmukh",
     title: "Sales Director at Elite Properties Pvt Ltd",
     description:
-      "We were looking for innovative ways to enhance our client experience in real estate sales. [Your Company Name] helped us develop an immersive VR platform that allows potential buyers to take virtual tours of our properties from anywhere in the world. The VR environment was meticulously designed, with detailed 3D renderings that gave buyers a realistic feel of our homes.",
+      "We were looking for innovative ways to enhance our client experience in real estate sales. Aithrown helped us develop an immersive VR platform that allows potential buyers to take virtual tours of our properties from anywhere in the world. The VR environment was meticulously designed, with detailed 3D renderings that gave buyers a realistic feel of our homes.",
   },
   {
     id: 6,
@@ -333,7 +350,7 @@ export const testimonials = [
     name: "Ajay Patil",
     title: "CTO of TechServe Solutions",
     description:
-      "We needed a completely revamped website that could better reflect our growing enterprise software business. [Your Company Name] came in and completely redesigned our website from the ground up, implementing a responsive, mobile-friendly design with integrated CRM tools and a content management system. The website's new user interface is sleek, modern, and easy to navigate, providing our clients with a better experience.",
+      "We needed a completely revamped website that could better reflect our growing enterprise software business. Aithrown came in and completely redesigned our website from the ground up, implementing a responsive, mobile-friendly design with integrated CRM tools and a content management system. The website's new user interface is sleek, modern, and easy to navigate, providing our clients with a better experience.",
   },
   {
     id: 7,
@@ -341,7 +358,7 @@ export const testimonials = [
     name: "Sunil Kapoor",
     title: "Operations Manager at SteelTech Manufacturing",
     description:
-      "Our manufacturing process was riddled with inefficiencies due to manual data entry and repetitive tasks. [Your Company Name]’s Robotic Process Automation (RPA) solution helped us automate critical processes, from order fulfillment to inventory management. The RPA bots they developed have been instrumental in cutting down human errors, reducing operational costs, and improving productivity.",
+      "Our manufacturing process was riddled with inefficiencies due to manual data entry and repetitive tasks. Aithrown’s Robotic Process Automation (RPA) solution helped us automate critical processes, from order fulfillment to inventory management. The RPA bots they developed have been instrumental in cutting down human errors, reducing operational costs, and improving productivity.",
   },
 ];
 
@@ -449,66 +466,82 @@ export const faqItems = [
 
 export const blogsLinks = [
   {
+    image: blog1,
     link: "http://aithrown.blogspot.com/2024/12/what-is-ai-and-how-can-it-transform.html",
     desc: " Artificial Intelligence (AI) is no longer just a buzzword—it’s a transformative force reshaping industries worldwide. ",
   },
   {
+    image: blog2,
     link: "http://aithrown.blogspot.com/2024/12/how-predictive-analytics-can-give-your.html",
     desc: "At Aithrown, we specialize in crafting predictive analytics solutions that unlock the potential of your data, giving your business the insight it needs to thrive.",
   },
   {
+    image: blog3,
     link: "http://aithrown.blogspot.com/2024/12/top-ai-trends-in-2024-and-what-they.html",
     desc: "At Aithrown, we help businesses navigate and leverage these trends to stay competitive.",
   },
   {
+    image: blog4,
     link: "http://aithrown.blogspot.com/2024/12/how-healthcare-providers-can-begin.html",
     desc: "At Aithrown, we specialize in helping healthcare providers embrace AI, creating tailored solutions to address their unique challenges and goals. Here’s how you can get started",
   },
   {
+    image: blog5,
     link: "http://aithrown.blogspot.com/2024/12/personalized-learning-revolutionizing.html",
     desc: " In today’s fast-paced world, education must evolve to meet the diverse needs of every student. Traditional teaching methods often struggle to address individual learning differences, leading to gaps in understanding and engagement. This is where Aithrown comes in. Our cutting-edge AI-powered solutions are transforming personalized learning, creating a dynamic and inclusive educational experience for students and a competitive advantage for schools.",
   },
   {
+    image: blog6,
     link: "http://aithrown.blogspot.com/2024/12/student-support-enhance-well-being-with.html",
     desc: "This is where Aithrown’s AI-powered chatbots come into play, offering round-the-clock support to enhance the student experience and create a thriving school environment.",
   },
   {
+    image: blog7,
     link: "http://aithrown.blogspot.com/2024/12/special-education-empower-every-student.html",
     desc: " Aithrown is at the forefront of this transformation, offering powerful assistive tools designed to empower special education students and redefine what’s possible in the classroom.",
   },
   {
+    image: blog8,
     link: "http://aithrown.blogspot.com/2024/12/content-creation-automate-lesson-plans.html",
     desc: "Aithrown brings cutting-edge AI solutions to schools, enabling the automation of lesson planning and digital resource creation, giving teachers more time to focus on what matters most—teaching.",
   },
   {
+    image: blog9,
     link: "http://aithrown.blogspot.com/2024/12/parent-teacher-collaboration-strengthen.html",
     desc: "Aithrown addresses this challenge with AI-powered dashboards that revolutionize parent-teacher collaboration, ensuring a seamless flow of information and stronger partnerships.",
   },
   {
+    image: blog10,
     link: "http://aithrown.blogspot.com/2024/12/security-ensure-student-safety-with.html",
     desc: " In today’s world, student safety is a top priority for every school. While education focuses on academic excellence, ensuring a secure environment is critical to fostering trust among parents, students, and staff. Traditional security measures often fall short in addressing modern challenges, but AI-powered solutions from Aithrown are here to bridge the gap. With advanced surveillance and emergency response tools, Aithrown helps schools create a safe and protected space for learning.",
   },
   {
+    image: blog11,
     link: "http://aithrown.blogspot.com/2024/12/transforming-education-how-aithrown.html",
     desc: "Aithrown is at the forefront of this transformation, offering comprehensive AI-driven services that revolutionize education, streamline operations, and set schools apart as leaders in their field.",
   },
   {
+    image: blog12,
     link: "http://aithrown.blogspot.com/2025/01/unlocking-creativity-and-innovation-how.html",
     desc: "At Aithrown, we are at the forefront of this revolution, empowering businesses to harness the full potential of generative AI to drive growth and innovation.",
   },
   {
+    image: blog13,
     link: "http://aithrown.blogspot.com/2025/01/elevate-your-digital-presence-with.html",
     desc: "At Aithrown, we specialize in seamlessly integrating AI into web development, delivering solutions that enhance user engagement, streamline operations, and drive business growth.",
   },
   {
+    image: blog14,
     link: "http://aithrown.blogspot.com/2025/01/why-every-salon-makeover-studio-needs.html",
     desc: "At Aithrown, we specialize in helping businesses harness the power of digital transformation through AI-driven solutions. With AppGalaxy, our subsidiary dedicated to premium website and app development, we can craft tailor-made websites designed to elevate your salon's brand and revenue.",
   },
   {
+    image: blog15,
     link: "http://aithrown.blogspot.com/2025/01/why-every-salon-makeover-studio-needs_3.html",
     desc: "At Aithrown, we specialize in cutting-edge AI-driven solutions to help businesses thrive in the digital era. Through AppGalaxy, our subsidiary focused exclusively on premium app and website development, we deliver custom mobile apps designed to elevate your salon’s services and customer experience.",
   },
   {
+    image: blog16,
     link: "http://aithrown.blogspot.com/2025/01/streamline-your-restaurant-operations.html",
     desc: "At Aithrown, our AI-driven solutions redefine efficiency, and with our subsidiary Appgalaxy, we provide comprehensive restaurant management software designed to meet the needs of modern restaurants.",
   },

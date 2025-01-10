@@ -11,7 +11,7 @@ const BlogPage = () => {
           <Link key={i} to={obj.link} className=" group">
             <div className="flex flex-col h-full bg-[#0458F6] rounded-lg overflow-clip  items-center ">
               <img
-                src={blogimg}
+                src={obj.image}
                 alt="blogimg"
                 className=" h-full w-full max-h-[10rem] left-0 top-0 object-cover group-hover:scale-105 transition-all duration-300"
               />
