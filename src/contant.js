@@ -49,6 +49,10 @@ import blog13 from "./assets/blogs/blog13.jpg";
 import blog14 from "./assets/blogs/blog14.jpg";
 import blog15 from "./assets/blogs/blog15.jpg";
 import blog16 from "./assets/blogs/blog16.jpg";
+import blog17 from "./assets/blogs/blog17.jpg";
+import blog18 from "./assets/blogs/blog18.jpg";
+import blog19 from "./assets/blogs/blog19.jpg";
+import blog20 from "./assets/blogs/blog20.jpg";
 export const clientDetails = {
   phone: "+91-8547203254",
   whatsappbox: "8547203254",
@@ -544,5 +548,25 @@ export const blogsLinks = [
     image: blog16,
     link: "http://aithrown.blogspot.com/2025/01/streamline-your-restaurant-operations.html",
     desc: "At Aithrown, our AI-driven solutions redefine efficiency, and with our subsidiary Appgalaxy, we provide comprehensive restaurant management software designed to meet the needs of modern restaurants.",
+  },
+  {
+    image: blog17,
+    link: "https://aithrown.blogspot.com/2025/01/redefining-gaming-experiences-how.html",
+    desc: "In the dynamic world of game development, creating immersive and engaging experiences is paramount. At Aithrown, we specialize in leveraging cutting-edge technologies to craft games that captivate players and set new industry standards.",
+  },
+  {
+    image: blog18,
+    link: "https://aithrown.blogspot.com/2025/01/the-future-of-mobile-app-development.html",
+    desc: "In the rapidly evolving landscape of mobile application development, Java continues to be a cornerstone technology, offering reliability, scalability, and a vast ecosystem of tools and libraries. At Aithrown and our subsidiary Appgalaxy, we are at the forefront of leveraging Java to craft innovative mobile solutions that meet the dynamic needs of businesses and users alike.",
+  },
+  {
+    image: blog19,
+    link: "https://aithrown.blogspot.com/2025/01/revolutionizing-travel-services.html",
+    desc: "In today's fast-paced travel industry, having a robust and efficient travel booking software is essential for agencies aiming to provide seamless services to their clients. At Aithrown and our subsidiary Appgalaxy, we specialize in delivering cutting-edge travel booking solutions that not only streamline operations but also enhance customer satisfaction and drive business growth.",
+  },
+  {
+    image: blog20,
+    link: "https://aithrown.blogspot.com/2025/01/how-ai-helped-create-website-that.html",
+    desc: " In the rapidly evolving landscape of mobile application development, Java continues to be a cornerstone technology, offering reliability, scalability, and a vast ecosystem of tools and libraries. At Aithrown and our subsidiary Appgalaxy, we are at the forefront of leveraging Java to craft innovative mobile solutions that meet the dynamic needs of businesses and users alike.",
   },
 ];
