@@ -53,6 +53,7 @@ import blog17 from "./assets/blogs/blog17.jpg";
 import blog18 from "./assets/blogs/blog18.jpg";
 import blog19 from "./assets/blogs/blog19.jpg";
 import blog20 from "./assets/blogs/blog20.jpg";
+import blog21 from "./assets/blogs/blog21.jpg";
 export const clientDetails = {
   phone: "+91-8547203254",
   whatsappbox: "8547203254",
@@ -568,5 +569,10 @@ export const blogsLinks = [
     image: blog20,
     link: "https://aithrown.blogspot.com/2025/01/how-ai-helped-create-website-that.html",
     desc: " In the rapidly evolving landscape of mobile application development, Java continues to be a cornerstone technology, offering reliability, scalability, and a vast ecosystem of tools and libraries. At Aithrown and our subsidiary Appgalaxy, we are at the forefront of leveraging Java to craft innovative mobile solutions that meet the dynamic needs of businesses and users alike.",
+  },
+  {
+    image: blog21,
+    link: "https://aithrown.blogspot.com/2025/01/how-ai-is-revolutionizing-e-commerce.html",
+    desc: " In the fast-paced world of e-commerce, staying ahead of the competition requires embracing cutting-edge technologies. As we step into 2025, Artificial Intelligence (AI) is leading the charge in transforming the e-commerce landscape. From personalized shopping experiences to streamlined supply chain management, AI is reshaping how businesses operate and how customers shop online. At Aithrown, our mission is to help e-commerce businesses harness the power of AI to thrive in this evolving digital age.",
   },
 ];
