@@ -30,7 +30,7 @@ const countDetails = [
   {
     id: 4,
     title: "Success Rate",
-    count: 100,
+    count: 99,
     suffix: "%",
     p: "Illustrating our global presence and ability to meet the needs of businesses worldwide.",
   },
