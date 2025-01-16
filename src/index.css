@@ -17,10 +17,10 @@ body {
     @apply bg-gradient-to-r text-base cursor-pointer font-medium from-primary/50 to-primary min-w-[9rem] flex justify-center text-center px-5 py-3 text-white rounded-full transition-all duration-300 hover:-translate-y-1;
   }
   .secondary-btn {
-    @apply bg-[#5C5E60] text-base cursor-pointer font-medium min-w-[9rem] flex justify-center text-center px-5 py-3 text-white rounded-full transition-all duration-300 hover:-translate-y-1;
+    @apply bg-secondary text-base cursor-pointer font-medium min-w-[9rem] flex justify-center text-center px-5 py-3 text-white rounded-full transition-all duration-300 hover:-translate-y-1;
   }
   .blurred-red-circle {
-    @apply bg-[#ee7cc245] rounded-full blur-3xl absolute;
+    @apply bg-primary rounded-full blur-3xl absolute;
   }
   .heading {
     @apply text-[2rem] md:text-5xl leading-tight font-semibold;
@@ -51,7 +51,7 @@ body {
   bottom: 0;
   margin: auto;
   border: 3px solid;
-  border-color: transparent #0458f5 #3a6dcdba;
+  border-color: transparent #0458f6 #3a6dcdba;
   width: 24px;
   height: 24px;
   border-radius: 50%;

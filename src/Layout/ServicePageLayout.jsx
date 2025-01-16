@@ -9,11 +9,12 @@ import ServiceDetailsBanner from "../Components/ServiceDetailsBanner";
 import { allServices, clientDetails } from "../contant";
 import ScrollToTop from "../Components/ScrollToTop";
 import WhatsAppIcon from "../Components/WhatAppIcon";
+import AppGalaxy from "../Components/AppGalaxy";
 
 const ServicePageLayout = () => {
   const { pathname } = useLocation();
   return (
-    <>
+    <div className="max-w-screen overflow-hidden">
       <Header />
       <ServiceDetailsBanner />
       <WhatsAppIcon />
@@ -81,6 +82,7 @@ const ServicePageLayout = () => {
           <div className="w-full">
             <Outlet />
           </div>
+
           <div
             data-aos="fade-up"
             className="text-center bg-[#ECF8FF] flex md:hidden flex-col items-start gap-3 px-4 lg:px-6 py-10 rounded-lg"
@@ -116,10 +118,13 @@ const ServicePageLayout = () => {
             </Link>
           </div>
         </div>
+        <div className="">
+          {pathname === "/services/web-app-development" && <AppGalaxy />}
+        </div>
       </div>
       <GetInTouch />
       <Footer />
-    </>
+    </div>
   );
 };
 

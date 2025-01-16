@@ -25,7 +25,7 @@ const BestServicesSlider = () => {
 
   return (
     <section className="py-[5rem] relative">
-      <div className="blurred-red-circle h-[25rem] w-[25rem] top-[-10rem] left-[-10rem] -z-10"></div>
+      <div className="blurred-red-circle h-[20rem] w-[20rem] top-[-10rem] left-[-10rem] -z-10"></div>
       <div className="wrapper text-center ">
         <p className="gradient-text uppercase mb-3 text-white">
           our top services

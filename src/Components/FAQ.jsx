@@ -16,13 +16,18 @@ const FAQ = () => {
       </div>
       <div className="mt-10 grid gap-5">
         {/* Upper Section (Grid with 2 Columns for md and above) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
           {faqItems.map((faq) => (
-            <div key={faq.id} className="bg-[#08081b] flex flex-col">
+            // [#08081b]
+            <div
+              key={faq.id}
+              className="bg-white flex flex-col rounded-lg hover:scale-105 transition-all duration-300"
+            >
               <div className="bg-aboutas-gradient h-[.5px]" />
               <div className="py-5 px-3">
-                <h4 className="font-medium">{faq.question}</h4>
-                <p className="text-base text-[#BABCC6]">{faq.answer}</p>
+                <h4 className="font-medium text-primary">{faq.question}</h4>
+                {/* [#BABCC6] */}
+                <p className="text-base text-black">{faq.answer}</p>
               </div>
               <div className="bg-aboutas-gradient h-[.5px]" />
             </div>

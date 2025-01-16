@@ -3,13 +3,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import { GrFacebookOption } from "react-icons/gr";
+import { GrFacebookOption, GrLinkedinOption } from "react-icons/gr";
 import { allServices } from "../contant";
 import logo from "../assets/logo/logo.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#17012C] py-[3rem] text-white">
+    // [#17012C]
+    <div className="bg-white py-[3rem] text-black border-t border-primary">
       <div className="px-5 sm:px-10 flex flex-col gap-3 sm:flex-row justify-between">
         <div className="flex flex-col gap-3 items-start">
           {/* <img
@@ -37,6 +38,9 @@ const Footer = () => {
             </Link>
             <Link>
               <GrFacebookOption className="text-2xl" />
+            </Link>
+            <Link to={"https://www.linkedin.com/company/aithrown/"}>
+              <GrLinkedinOption className="text-2xl" />
             </Link>
           </div>
           {/* <p className="max-w-[25rem] mt-3">Address: {clientDetails.address}</p> */}

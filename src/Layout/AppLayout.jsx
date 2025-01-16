@@ -8,7 +8,7 @@ import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
 const AppLayout = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden max-w-screen">
       <Header />
       <WhatsAppIcon />
       <TawkMessengerReact

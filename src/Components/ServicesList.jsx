@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { allServices } from "../contant";
+import { Link as ScrollLink, Element } from "react-scroll";
 
 const ServicesList = () => {
   const [selectedService, setSelectedService] = useState(allServices[0]);
@@ -15,7 +16,7 @@ const ServicesList = () => {
       <h1 className="heading text-center mb-8 text-white">
         Explore Our Offering
       </h1>
-      <div className="grid md:grid-cols-[38%_58%] gap-10 p-5 bg-primary/25 rounded-lg">
+      <div className="grid md:grid-cols-[38%_58%] gap-10 p-5 bg-primary rounded-lg">
         <div className="w-full flex flex-col gap-10">
           <div
             data-aos="fade-up"
@@ -24,40 +25,50 @@ const ServicesList = () => {
             <h4 className="text-2xl font-medium">Our Services</h4>
             <div className="mt-5 flex flex-wrap md:flex-col gap-3">
               {allServices.map((item) => (
-                <button
+                <ScrollLink
                   key={item.title}
-                  className={`${
-                    item.id === selectedService.id
-                      ? "primary-btn text-white"
-                      : "bg-white text-[#17012C]"
-                  } flex items-center gap-2 justify-center rounded-full text-center px-5 py-3 transition-all duration-300 hover:-translate-y-1`}
-                  onClick={() => handleServiceSelect(item)}
+                  to={`service-${item.id}`}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-100} // Adjust offset for header or padding
                 >
-                  {item.title}
-                </button>
+                  <button
+                    className={`${
+                      item.id === selectedService.id
+                        ? "primary-btn text-white"
+                        : "bg-white text-[#17012C]"
+                    } flex items-center gap-2 justify-center rounded-full text-center px-5 py-3 transition-all duration-300 hover:-translate-y-1`}
+                    onClick={() => handleServiceSelect(item)}
+                  >
+                    {item.title}
+                  </button>
+                </ScrollLink>
               ))}
             </div>
           </div>
         </div>
         <div className="w-full">
-          <div className="py-[2rem] text-white">
-            <h4 data-aos="fade-up" className="text-3xl font-medium">
-              {selectedService.title}
-            </h4>
-            <p
-              data-aos="fade-up"
-              className="mt-4 description whitespace-pre-line"
-            >
-              {selectedService.smallPara}
-            </p>
-            <Link
-              data-aos="fade-up"
-              to={selectedService.link}
-              className="secondary-btn w-fit mt-6"
-            >
-              Read More
-            </Link>
-          </div>
+          <Element name={`service-${selectedService.id}`}>
+            <div className="py-[2rem] text-common">
+              <h4 data-aos="fade-up" className="text-3xl font-medium">
+                {selectedService.title}
+              </h4>
+              <p
+                data-aos="fade-up"
+                className="mt-4 description whitespace-pre-line"
+              >
+                {selectedService.smallPara}
+              </p>
+              <Link
+                data-aos="fade-up"
+                to={selectedService.link}
+                className="secondary-btn w-fit mt-6"
+              >
+                Read More
+              </Link>
+            </div>
+          </Element>
         </div>
       </div>
     </section>

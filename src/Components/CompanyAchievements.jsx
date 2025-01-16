@@ -39,7 +39,7 @@ const CompanyAchievements = () => {
   return (
     <div
       data-aos="fade-up"
-      className="relative w-full h-full py-5   sm:py-10 sm:overflow-hidden mt-10 sm:mt-20 bg-cover bg-center bg-no-repeat -z-20"
+      className="relative w-full h-full py-5   sm:py-10 sm:overflow-hidden mt-10 sm:mt-20 bg-cover bg-center bg-no-repeat z-20"
       style={{
         backgroundImage: `url(${acheivementbackground})`,
       }}
@@ -67,7 +67,7 @@ const CompanyAchievements = () => {
             accelerate growth, and stay ahead of the competition.
           </p>
           <Link data-aos="fade-up" to={"/services"} className="">
-            <h3 className="primary-btn  w-fit">Discover More</h3>
+            <h3 className="primary-btn  w-fit z-50">Discover More</h3>
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">

@@ -44,9 +44,9 @@ const ClientsLogoSlider = () => {
     },
   });
   return (
-    <div className="flex flex-col gap-2 py-[5rem] bg-white">
+    <div className="flex flex-col gap-2 py-[5rem] bg-white mb-[5rem]">
       <h1 data-aos="fade-up" className="heading text-center">
-        Join Our <span className="text-blue-300">40+</span> Happy Customers
+        Join Our <span className="text-primary">40+</span> Happy Customers
       </h1>
       <div data-aos="fade-left" ref={sliderRef} className="keen-slider mt-4">
         {clients.concat(clients).map(({ img }, index) => (

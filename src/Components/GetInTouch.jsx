@@ -77,7 +77,7 @@ const GetInTouch = () => {
 
   return (
     <div id="contact" className="py-[5rem] relative">
-      <div className="blurred-red-circle h-[25rem] w-[25rem] bottom-[2rem] right-3 -z-10"></div>
+      <div className="blurred-red-circle h-[25rem] w-[25rem] bottom-[2rem] -right-[10rem] -z-10"></div>
       <div className="blue-bg-shape bottom-[-2rem] left-[-2rem] -z-10 rotate-[-45deg]"></div>
       <div className="wrapper grid grid-cols-1 lg:grid-cols-2 justify-items-center lg:justify-items-stretch items-center gap-7">
         <div data-aos="fade-right" className="flex flex-col gap-5 text-white">
@@ -216,7 +216,7 @@ const GetInTouch = () => {
 
               <button
                 type="submit"
-                className="mt-4 bg-white text-[#433d99] px-5 py-3 rounded-full hover:bg-[#5B3E9A] hover:text-white hover:-translate-y-1 duration-300 transition-all"
+                className="mt-4 bg-white text-primary px-5 py-3 rounded-full hover:bg-primary hover:text-white border border-transparent hover:border-common hover:-translate-y-1 duration-300 transition-all"
               >
                 {send ? "Sending..." : "Send Message"}
               </button>
