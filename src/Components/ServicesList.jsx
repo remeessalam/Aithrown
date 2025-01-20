@@ -1,16 +1,27 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { allServices } from "../contant";
-import { Link as ScrollLink, Element } from "react-scroll";
+import { Link as ScrollLink, Element, scroller } from "react-scroll";
 
 const ServicesList = () => {
   const [selectedService, setSelectedService] = useState(allServices[0]);
   const { pathname } = useLocation();
-  useEffect(() => {}, [selectedService]);
-  // set active service
+
+  // Scroll to the selected service whenever it changes
+  useEffect(() => {
+    scroller.scrollTo(`service-${selectedService.id}`, {
+      duration: 500,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -150, // Adjust for padding or header
+    });
+  }, [selectedService]);
+
+  // Set active service
   const handleServiceSelect = (item) => {
     setSelectedService(item);
   };
+
   return (
     <section className="wrapper py-[2rem]">
       <h1 className="heading text-center mb-8 text-white">
@@ -25,25 +36,17 @@ const ServicesList = () => {
             <h4 className="text-2xl font-medium">Our Services</h4>
             <div className="mt-5 flex flex-wrap md:flex-col gap-3">
               {allServices.map((item) => (
-                <ScrollLink
+                <button
                   key={item.title}
-                  to={`service-${item.id}`}
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={-100} // Adjust offset for header or padding
+                  className={`${
+                    item.id === selectedService.id
+                      ? "primary-btn text-white"
+                      : "bg-white text-[#17012C]"
+                  } flex items-center gap-2 justify-center rounded-full text-center px-5 py-3 transition-all duration-300 hover:-translate-y-1`}
+                  onClick={() => handleServiceSelect(item)}
                 >
-                  <button
-                    className={`${
-                      item.id === selectedService.id
-                        ? "primary-btn text-white"
-                        : "bg-white text-[#17012C]"
-                    } flex items-center gap-2 justify-center rounded-full text-center px-5 py-3 transition-all duration-300 hover:-translate-y-1`}
-                    onClick={() => handleServiceSelect(item)}
-                  >
-                    {item.title}
-                  </button>
-                </ScrollLink>
+                  {item.title}
+                </button>
               ))}
             </div>
           </div>
