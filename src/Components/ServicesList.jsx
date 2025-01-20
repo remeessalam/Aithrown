@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { allServices } from "../contant";
 import { Link as ScrollLink, Element } from "react-scroll";
@@ -6,7 +6,7 @@ import { Link as ScrollLink, Element } from "react-scroll";
 const ServicesList = () => {
   const [selectedService, setSelectedService] = useState(allServices[0]);
   const { pathname } = useLocation();
-
+  useEffect(() => {}, [selectedService]);
   // set active service
   const handleServiceSelect = (item) => {
     setSelectedService(item);
