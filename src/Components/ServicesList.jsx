@@ -6,15 +6,18 @@ import { Link as ScrollLink, Element, scroller } from "react-scroll";
 const ServicesList = () => {
   const [selectedService, setSelectedService] = useState(allServices[0]);
   const { pathname } = useLocation();
-
-  // Scroll to the selected service whenever it changes
+  const [isFirstRender, setIsFirstRender] = useState(true);
   useEffect(() => {
-    scroller.scrollTo(`service-${selectedService.id}`, {
-      duration: 500,
-      delay: 0,
-      smooth: "easeInOutQuart",
-      offset: -150, // Adjust for padding or header
-    });
+    if (!isFirstRender) {
+      scroller.scrollTo(`service-${selectedService.id}`, {
+        duration: 500,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -100, // Adjust for padding or header
+      });
+    } else {
+      setIsFirstRender(false); // Mark that the first render has occurred
+    }
   }, [selectedService]);
 
   // Set active service
