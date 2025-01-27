@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { allServices } from "../contant";
 import { Link as ScrollLink, Element, scroller } from "react-scroll";
 
@@ -19,9 +19,10 @@ const ServicesList = () => {
       setIsFirstRender(false); // Mark that the first render has occurred
     }
   }, [selectedService]);
-
+  const navigate = useNavigate();
   // Set active service
   const handleServiceSelect = (item) => {
+    navigate(item.link);
     setSelectedService(item);
   };
 
@@ -55,7 +56,8 @@ const ServicesList = () => {
           </div>
         </div>
         <div className="w-full">
-          <Element name={`service-${selectedService.id}`}>
+          {/* name={`service-${selectedService.id}`} */}
+          <Element>
             <div className="py-[2rem] text-common">
               <h4 data-aos="fade-up" className="text-3xl font-medium">
                 {selectedService.title}
