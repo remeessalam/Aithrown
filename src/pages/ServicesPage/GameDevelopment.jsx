@@ -1,5 +1,9 @@
 import img1 from "../../assets/services-details/game1.jpg";
 import img2 from "../../assets/services-details/game2.jpg";
+import game1 from "../../assets/services-details/gameimageone.webp";
+import game2 from "../../assets/services-details/gameimagetwo.webp";
+import game3 from "../../assets/services-details/gameimagethree.webp";
+import game4 from "../../assets/services-details/gameimagefour.webp";
 
 const GameDevelopment = () => {
   return (
@@ -69,6 +73,38 @@ const GameDevelopment = () => {
           Post-Launch Support: From updates to new features and bug fixes, we
           provide ongoing support to keep your game fresh and engaging.
         </p>
+      </div>
+      <div>
+        <img
+          data-aos="fade-up"
+          src={game1}
+          loading="lazy"
+          className="h-[25rem] object-cover rounded-3xl object-center my-4 mx-auto"
+          alt="ar and vr"
+        />{" "}
+        <div className="flex flex-wrap gap-4 justify-center">
+          <img
+            data-aos="fade-up"
+            src={game2}
+            loading="lazy"
+            className="h-[25rem] object-cover rounded-3xl object-center my-4"
+            alt="ar and vr"
+          />
+          <img
+            data-aos="fade-up"
+            src={game3}
+            loading="lazy"
+            className="h-[25rem] object-cover rounded-3xl object-center my-4"
+            alt="ar and vr"
+          />
+          <img
+            data-aos="fade-up"
+            src={game4}
+            loading="lazy"
+            className="h-[25rem] object-cover rounded-3xl object-center my-4"
+            alt="ar and vr"
+          />
+        </div>
       </div>
     </div>
   );

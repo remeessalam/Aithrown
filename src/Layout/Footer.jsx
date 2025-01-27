@@ -1,11 +1,12 @@
 import React from "react";
 // import logo from "../../assets/logo/logo.png";
 import { Link } from "react-router-dom";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaBlogger, FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { GrFacebookOption, GrLinkedinOption } from "react-icons/gr";
 import { allServices } from "../contant";
 import logo from "../assets/logo/logo.png";
+import { BiMapPin } from "react-icons/bi";
 
 const Footer = () => {
   return (
@@ -29,9 +30,16 @@ const Footer = () => {
             Follow us on our social media handles to keep up to date with our
             latest work and announcements.
           </p>
+          <div>
+            <div className="flex items-center gap-2">
+              <BiMapPin className="w-5 h-5" />
+              <h3 className="font-semibold text-lg">Registered office</h3>
+            </div>
+            <p className="text-sm">Kerala - IN</p>
+          </div>
           <div className="flex mt-3 gap-5 items-center">
             <Link>
-              <FaLinkedinIn className="text-2xl" />
+              <FaBlogger className="text-2xl" />
             </Link>
             <Link>
               <AiFillInstagram className="text-2xl" />

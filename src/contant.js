@@ -32,6 +32,11 @@ import service8 from "./assets/service8.png";
 import service9 from "./assets/service9.png";
 import service10 from "./assets/service10.png";
 import service11 from "./assets/service11.png";
+//whychooseus images
+import mechanical from "./assets/images/mechanical.png";
+import expert from "./assets/images/expert.png";
+import target from "./assets/images/target.png";
+import cogwheel from "./assets/images/cogwheel.png";
 //blog images
 import blog1 from "./assets/blogs/blog1.jpeg";
 import blog2 from "./assets/blogs/blog2.jpg";
@@ -580,5 +585,36 @@ export const blogsLinks = [
     image: blog22,
     link: "https://aithrown.blogspot.com/2025/01/top-5-ai-powered-tools-every-retailer.html",
     desc: "The retail industry has undergone a seismic transformation, driven by the rise of e-commerce, changing customer expectations, and technological advancements. Today, Artificial Intelligence (AI) is not just a buzzword—it's the backbone of innovation in retail. For retailers looking to stay ahead of the curve, AI-powered tools are essential to enhance efficiency, optimize customer experiences, and increase profitability.",
+  },
+];
+
+export const whyChooseUs = [
+  {
+    id: 1,
+    icon: mechanical,
+    heading: "Innovation at Our Core: Pioneering the Future",
+    description:
+      "We don't merely follow trends; we lead the charge in shaping the future. By harnessing cutting-edge technology and visionary strategies, we craft solutions that redefine the boundaries of possibility. Our commitment to innovation drives us to explore new frontiers, empowering your business with transformative tools and insights that set you apart in a competitive landscape. Join us as we turn bold ideas into reality, positioning your organization at the forefront of the digital revolution.",
+  },
+  {
+    id: 2,
+    icon: target,
+    heading: "Customer-Centric Approach: Your Vision, Our Mission",
+    description:
+      "At Vollo Inc., you are not just a client; you are our top priority. We are dedicated to forging strong partnerships that allow us to deeply understand your unique needs and aspirations. Our team collaborates with you every step of the way, ensuring that we deliver tailored solutions that seamlessly integrate with your business. With a focus on personalization and excellence, we empower you to achieve your goals and thrive in today’s dynamic marketplace. Your success is our mission, and we are here to make it happen.",
+  },
+  {
+    id: 3,
+    icon: expert,
+    heading: "Comprehensive Expertise: A Multidisciplinary Powerhouse",
+    description:
+      "Our diverse team of specialists represents a fusion of knowledge and experience across multiple domains, including artificial intelligence, cybersecurity, cloud computing, and more. This multidisciplinary expertise allows us to tackle even the most complex challenges with confidence and precision. By leveraging our collective skills, we develop innovative solutions tailored to your specific needs, ensuring you receive the highest level of service and support. Trust in our comprehensive expertise to propel your business forward and navigate the ever-evolving landscape of technology with assurance and agility.",
+  },
+  {
+    id: 4,
+    icon: cogwheel,
+    heading: "Scalable and Future-Proof Solutions",
+    description:
+      "We don’t just build for today—we build for tomorrow. Our solutions are designed to grow with your business, ensuring long-term success and adaptability in an ever-changing market.",
   },
 ];
