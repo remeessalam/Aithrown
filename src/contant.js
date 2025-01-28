@@ -404,7 +404,7 @@ export const faqItems = [
   {
     id: 1,
     question: "How can I get in touch with Aithrown.?",
-    answer: `You can reach out to us through the contact form on this page, or by emailing us directly at info@example.com. Alternatively, you can also call us at +91-8547203254 for immediate assistance.`,
+    answer: `You can reach out to us through the contact form on this page, or by emailing us directly at contactaithrown@gmail.com. Alternatively, you can also call us at +91-8547203254 for immediate assistance.`,
   },
   {
     id: 2,
@@ -433,7 +433,7 @@ export const faqItems = [
   {
     id: 4,
     question: "How do I schedule a consultation or meeting with Aithrown.?",
-    answer: `You can schedule a meeting by filling out the contact form on this page or by sending us an email at <strong>info@example.com</strong>. We’ll get back to you with available time slots.`,
+    answer: `You can schedule a meeting by filling out the contact form on this page or by sending us an email at <strong>contactaithrown@gmail.com</strong>. We’ll get back to you with available time slots.`,
   },
   {
     id: 5,
@@ -649,7 +649,7 @@ export const whyChooseUs = [
     icon: target,
     heading: "Customer-Centric Approach: Your Vision, Our Mission",
     description:
-      "At Vollo Inc., you are not just a client; you are our top priority. We are dedicated to forging strong partnerships that allow us to deeply understand your unique needs and aspirations. Our team collaborates with you every step of the way, ensuring that we deliver tailored solutions that seamlessly integrate with your business. With a focus on personalization and excellence, we empower you to achieve your goals and thrive in today’s dynamic marketplace. Your success is our mission, and we are here to make it happen.",
+      "At Aithrown, you are not just a client; you are our top priority. We are dedicated to forging strong partnerships that allow us to deeply understand your unique needs and aspirations. Our team collaborates with you every step of the way, ensuring that we deliver tailored solutions that seamlessly integrate with your business. With a focus on personalization and excellence, we empower you to achieve your goals and thrive in today’s dynamic marketplace. Your success is our mission, and we are here to make it happen.",
   },
   {
     id: 3,
