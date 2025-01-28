@@ -60,6 +60,14 @@ import blog19 from "./assets/blogs/blog19.jpg";
 import blog20 from "./assets/blogs/blog20.jpg";
 import blog21 from "./assets/blogs/blog21.jpg";
 import blog22 from "./assets/blogs/blog22.jpg";
+import blog23 from "./assets/blogs/blog23.jpg";
+import blog24 from "./assets/blogs/blog24.jpg";
+import blog25 from "./assets/blogs/blog25.jpg";
+import blog26 from "./assets/blogs/blog26.jpg";
+import blog27 from "./assets/blogs/blog27.jpg";
+import blog28 from "./assets/blogs/blog28.jpg";
+import blog29 from "./assets/blogs/blog29.jpg";
+import blog30 from "./assets/blogs/blog30.jpg";
 export const clientDetails = {
   phone: "+91-8547203254",
   whatsappbox: "8547203254",
@@ -585,6 +593,46 @@ export const blogsLinks = [
     image: blog22,
     link: "https://aithrown.blogspot.com/2025/01/top-5-ai-powered-tools-every-retailer.html",
     desc: "The retail industry has undergone a seismic transformation, driven by the rise of e-commerce, changing customer expectations, and technological advancements. Today, Artificial Intelligence (AI) is not just a buzzword—it's the backbone of innovation in retail. For retailers looking to stay ahead of the curve, AI-powered tools are essential to enhance efficiency, optimize customer experiences, and increase profitability.",
+  },
+  {
+    image: blog23,
+    link: "https://aithrown.blogspot.com/2025/01/10-retail-tech-trends-transforming.html",
+    desc: " The retail industry is no stranger to innovation, and 2025 is shaping up to be a groundbreaking year for technology-driven transformations. From AI-powered personalization to immersive shopping experiences, tech trends are redefining how consumers shop and interact with brands.",
+  },
+  {
+    image: blog24,
+    link: "https://aithrown.blogspot.com/2025/01/a-beginners-guide-to-using-ai-in-retail.html",
+    desc: " The retail industry is undergoing a seismic shift, with artificial intelligence (AI) becoming the driving force behind operational efficiency, customer engagement, and business growth. For retailers, adopting AI is no longer optional—it’s the key to staying competitive.",
+  },
+  {
+    image: blog25,
+    link: "https://aithrown.blogspot.com/2025/01/why-e-commerce-businesses-should-invest.html",
+    desc: "In 2025, the e-commerce landscape is more competitive than ever. With millions of businesses vying for customers’ attention, the question is no longer if e-commerce businesses should adopt AI, but when. The answer is simple—now. At Aithrown, we are transforming the e-commerce industry with cutting-edge AI solutions designed to help businesses thrive in this highly competitive digital era.",
+  },
+  {
+    image: blog26,
+    link: "https://aithrown.blogspot.com/2025/01/how-to-use-predictive-analytics-to.html",
+    desc: " In today’s hyper-competitive business world, understanding your customers and anticipating their needs is no longer optional—it’s essential. Predictive analytics has emerged as a revolutionary tool that enables businesses to stay ahead of the curve by turning data into actionable insights. At Aithrown, we specialize in providing advanced AI solutions, including predictive analytics, to help businesses optimize their marketing campaigns and maximize ROI.",
+  },
+  {
+    image: blog27,
+    link: "https://aithrown.blogspot.com/2025/01/how-blockchain-enhances-data-security.html",
+    desc: "In an age where digital transactions have become the backbone of e-commerce, ensuring data security is not just a luxury—it’s a necessity. Data breaches, fraud, and cyberattacks are constant threats to the e-commerce industry. But what if there was a revolutionary way to fortify these transactions? Enter blockchain technology, the game-changer for e-commerce security.",
+  },
+  {
+    image: blog28,
+    link: "https://aithrown.blogspot.com/2025/01/how-to-choose-right-technology-partner.html",
+    desc: " In today’s rapidly evolving digital landscape, selecting the right technology partner for your e-commerce store can make or break your business. Whether you're starting from scratch or scaling an existing platform, the right partner ensures a seamless blend of innovation, customer experience, and operational efficiency.",
+  },
+  {
+    image: blog29,
+    link: "https://aithrown.blogspot.com/2025/01/chatbots-in-e-commerce-boosting-sales.html",
+    desc: " In the fast-paced world of e-commerce, customer experience is king. But how do you ensure your customers are cared for round the clock? Enter chatbots, the AI-powered customer support heroes revolutionizing the retail industry. At Aithrown, we specialize in implementing chatbot solutions tailored to your business needs, ensuring your e-commerce platform thrives in a competitive market.",
+  },
+  {
+    image: blog30,
+    link: "https://aithrown.blogspot.com/2025/01/case-studies-and-success-stories-how.html",
+    desc: "In the dynamic world of e-commerce, staying ahead of the competition requires innovation, agility, and the ability to leverage advanced technology. One of the most iconic success stories in this domain is Amazon's groundbreaking use of AI-powered recommendations, which has revolutionized the way consumers shop and businesses grow. At Aithrown, we specialize in delivering AI-driven solutions to help businesses achieve similar success.",
   },
 ];
 
