@@ -3,18 +3,18 @@ import { whyChooseUs } from "../contant";
 const WhyChooseUs = () => {
   return (
     <div
-      className="relative mt-1 sm:mt-16 py-[4rem]  w-[100vw] bg-cover bg-right bg-no-repeat text-black"
+      className="relative mt-1 sm:mt-16 py-[4rem] -z-20 w-[100vw] bg-cover bg-top bg-no-repeat text-white"
       style={{ backgroundImage: `url(${whychooseus})` }}
     >
-      {/* <div className="absolute top-0 left-0 w-full h-full bg-white/90 lg:bg-white/50" /> */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10 bg-black/50 lg:bg-black/50" />
 
       {/* <div className="absolute top-0 w-full h-full bg-primary/30"></div> */}
-      <div className=" grid  grid-cols-3  wrapper items-center">
+      <div className=" grid  grid-cols-3 z-20  wrapper items-center">
         <div className="w-full col-span-3 sm:col-span-2 sm:w-[100%]">
           {/* <RoundedHeading text={" Why Choose Us"} /> */}
           <h2
             data-aos="fade-up"
-            className="text-smhead text-black sm:text-start text-center leading-tight"
+            className="text-smhead text-white sm:text-start text-center leading-tight"
           >
             Why Choose Us
           </h2>
@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
             </h2>
             <p
               data-aos="fade-up"
-              className="text-desc text-black max-w-[40rem]  sm:text-start text-center"
+              className="text-desc text-white max-w-[40rem]  sm:text-start text-center"
             >
               We begin by evaluating your needs to gain a clear understanding of
               your goals, challenges, and requirements.
@@ -50,9 +50,9 @@ const WhyChooseUs = () => {
                           alt=""
                         />
                       </div>
-                      <h5 className="text-head text-black">{obj.heading}</h5>
+                      <h5 className="text-head text-white">{obj.heading}</h5>
                     </div>
-                    <p className=" !text-black text-desc  text-start mt-3 ">
+                    <p className=" !text-white text-desc  text-start mt-3 ">
                       {obj.description}
                     </p>
                   </div>
