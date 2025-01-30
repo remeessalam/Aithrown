@@ -38,7 +38,7 @@ const Footer = () => {
             <p className="text-sm">Kerala - IN</p>
           </div>
           <div className="flex mt-3 gap-5 items-center">
-            <Link>
+            <Link to={"https://aithrown.blogspot.com/?m=1"}>
               <FaBlogger className="text-2xl" />
             </Link>
             <Link>
