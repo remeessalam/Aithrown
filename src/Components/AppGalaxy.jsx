@@ -1,6 +1,94 @@
+import { useState } from "react";
 import ReactPlayer from "react-player";
 import appdev from "../assets/appgalaxy/appdev.mp4";
 import webdev from "../assets/appgalaxy/webdev.mp4";
+//eslint-disable-next-line
+const Project = ({ paddingTop, src }) => (
+  <div
+    style={{ position: "relative" }}
+    className="border min-h-[30rem] py-10 px-4 flex justify-center "
+  >
+    <iframe
+      src={src}
+      loading="lazy"
+      // style={{
+      //   border: "none",
+      //   position: "absolute",
+      //   top: 0,
+      //   height: "100%",
+      //   width: "100%",
+      // }}
+      allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+      allowFullScreen
+    />
+  </div>
+);
+
+const webProjects = [
+  {
+    paddingTop: "80.25%",
+    src: "https://iframe.mediadelivery.net/embed/57031/25f52287-3df5-4179-a3b3-298e0eca01b3?autoplay=true&loop=true&muted=true&preload=true&responsive=true",
+  },
+  {
+    paddingTop: "80.25%",
+    src: "https://iframe.mediadelivery.net/embed/57031/f0a4b4a2-0c27-411b-8cbb-f8869dd1edea?autoplay=true&loop=true&muted=true&preload=true&responsive=true",
+  },
+  {
+    paddingTop: "80.77777777777777%",
+    src: "https://iframe.mediadelivery.net/embed/57031/e2635682-adc8-4049-a852-b51195901a2f?autoplay=true&loop=true&muted=true",
+  },
+  {
+    paddingTop: "80.77777777777777%",
+    src: "https://iframe.mediadelivery.net/embed/57031/e90c1293-925e-4ba5-92a1-d0e875194910?autoplay=true&loop=true&muted=true",
+  },
+  {
+    paddingTop: "80.4055944055944%",
+    src: "https://iframe.mediadelivery.net/embed/57031/9618e237-56b3-40a3-8818-283f3c2eca96?autoplay=true&loop=true&muted=true",
+  },
+  {
+    paddingTop: "85%",
+    src: "https://iframe.mediadelivery.net/embed/57031/3be1bf5c-102b-4672-bc10-8ab08c4a35f4?autoplay=true&loop=true&muted=true",
+  },
+];
+
+const appProjects = [
+  {
+    paddingTop: "75%",
+    src: "https://iframe.mediadelivery.net/embed/57031/a41b871a-1511-43d7-bbc9-a4f0f7aa5541?autoplay=true&loop=true&muted=true&preload=true&responsive=true",
+  },
+  {
+    paddingTop: "75%",
+    src: "https://iframe.mediadelivery.net/embed/57031/7dab5eda-1e63-4327-bb3e-37e19cabc276?autoplay=true&loop=true&muted=true&preload=true&responsive=true",
+  },
+  {
+    paddingTop: "100%",
+    src: "https://iframe.mediadelivery.net/embed/57031/948bd771-3e43-4448-85b2-25f2e631dd9b?autoplay=true&loop=true&muted=true&preload=true&responsive=true",
+  },
+  {
+    paddingTop: "131.11111111111111%",
+    src: "https://iframe.mediadelivery.net/embed/57031/a499b475-5f4e-44a6-832d-83200f805427?autoplay=true&loop=true&muted=true&preload=true&responsive=true",
+  },
+  {
+    paddingTop: "80.77777777777777%",
+    src: "https://iframe.mediadelivery.net/embed/57031/609178c6-daad-431c-987b-3cc3d7075cfc?autoplay=true&loop=true&muted=true&preload=true&responsive=true",
+  },
+  {
+    paddingTop: "80.7709497206704%",
+    src: "https://iframe.mediadelivery.net/embed/57031/6993048e-fe00-4120-bddd-e534e9392fe7?autoplay=true&loop=true&muted=true&preload=true&responsive=true",
+  },
+  {
+    paddingTop: "80.77777777777777%",
+    src: "https://iframe.mediadelivery.net/embed/57031/b7e3ec23-5c2d-4361-a1ad-178b5f302f05?autoplay=true&loop=true&muted=true",
+  },
+  {
+    paddingTop: "80.25%",
+    src: "https://iframe.mediadelivery.net/embed/57031/2ba77c3e-48b8-4828-b8db-e90089be8de1?autoplay=true&loop=true&muted=true&preload=true&responsive=true",
+  },
+  {
+    paddingTop: "79.25%",
+    src: "https://iframe.mediadelivery.net/embed/57031/8f5f7212-a2bf-4c6e-a27b-cffee58499ab?autoplay=true&loop=true&muted=true&preload=true&responsive=true",
+  },
+];
 
 const services = [
   {
@@ -8,84 +96,65 @@ const services = [
     description:
       "Customized solutions designed around your specific challenges",
     image: appdev,
+    type: "app",
   },
   {
     title: "Web Development",
     description:
       "Customized solutions designed around your specific challenges",
     image: webdev,
+    type: "web",
   },
 ];
-// const projects = [
-//   {
-//     title: "Cafe-App Project",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-16%20at%2011.30.43%E2%80%AFAM-xK1XkBnN8dPBZo2n21mOiL2rHDjsWv.png",
-//   },
-//   {
-//     title: "Food-App Project",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-16%20at%2011.30.43%E2%80%AFAM-xK1XkBnN8dPBZo2n21mOiL2rHDjsWv.png",
-//   },
-//   {
-//     title: "EV-Car Project",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-16%20at%2011.30.43%E2%80%AFAM-xK1XkBnN8dPBZo2n21mOiL2rHDjsWv.png",
-//   },
-//   {
-//     title: "Exercise Project",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-16%20at%2011.30.43%E2%80%AFAM-xK1XkBnN8dPBZo2n21mOiL2rHDjsWv.png",
-//   },
-//   {
-//     title: "Pen-App Project",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-16%20at%2011.30.43%E2%80%AFAM-xK1XkBnN8dPBZo2n21mOiL2rHDjsWv.png",
-//   },
-//   {
-//     title: "Travel Project",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-16%20at%2011.30.43%E2%80%AFAM-xK1XkBnN8dPBZo2n21mOiL2rHDjsWv.png",
-//   },
-// ];
+
 const AppGalaxy = () => {
+  const [selectedService, setSelectedService] = useState(null);
+
   return (
-    <div className="">
-      <h1 className="text-5xl text-white font-medium ">AppGalaxy</h1>
-      <div>
-        <div className="grid md:grid-cols-2 gap-6  px-4 py-[5rem]">
+    <div className="container mx-auto px-4">
+      <div className="flex items-center justify-between py-8">
+        <h1 className="text-5xl text-white font-medium">AppGalaxy</h1>
+        {selectedService && (
+          <button
+            onClick={() => setSelectedService(null)}
+            className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg transition-colors duration-200"
+          >
+            Back to Services
+          </button>
+        )}
+      </div>
+
+      {!selectedService ? (
+        <div className="grid md:grid-cols-2 gap-6 py-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-xl"
+              className="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-xl cursor-pointer hover:transform hover:scale-105 transition-transform duration-300"
+              onClick={() => setSelectedService(service.type)}
             >
               <ReactPlayer
                 url={service.image}
-                loop={true}
+                loop
                 playsinline
-                playing={true}
+                playing
                 width="100%"
                 height="50vh"
                 muted
-                className=" object-cover overflow-hidden !max-h-[60vh]"
+                className="object-cover overflow-hidden !max-h-[60vh]"
                 config={{
                   file: {
                     attributes: {
-                      style: {
-                        objectFit: "cover",
-                        // width: "100vw",
-                        height: "50vh !important",
-                      },
+                      style: { objectFit: "cover", height: "50vh !important" },
                     },
                   },
                 }}
               />
-              <div className="p-6 !bg-common ">
+              <div className="p-6 bg-common">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="inline-block w-6 h-6 text-secondary">
                     &lt;/&gt;
                   </span>
-                  <h3 className="text-primary text-xl font-bold uppercase ">
+                  <h3 className="text-primary text-xl font-bold uppercase">
                     {service.title}
                   </h3>
                 </div>
@@ -94,45 +163,17 @@ const AppGalaxy = () => {
             </div>
           ))}
         </div>
-        {/* <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-4">
-              OUR PROJECTS
-            </h2>
-            <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-              Leverage our mobile app expertise to create a powerful digital
-              presence and increase customer retention
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {projects.map((obj, index) => (
-                <div
-                  key={index}
-                  className="relative group overflow-hidden rounded-lg"
-                >
-                  <img
-                    src={obj.image || "/placeholder.svg"}
-                    alt={obj.title}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="text-white text-xl font-bold text-center uppercase">
-                      {obj.title}
-                    </h3>
-                  </div>
-                </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+          {selectedService === "web"
+            ? webProjects.map((project, index) => (
+                <Project key={`web-${index}`} {...project} />
+              ))
+            : appProjects.map((project, index) => (
+                <Project key={`app-${index}`} {...project} />
               ))}
-            </div>
-            <div className="flex justify-center gap-4 mt-12">
-              <button className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors">
-                Website Portfolio
-              </button>
-              <button className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors">
-                App Portfolio
-              </button>
-            </div>
-          </div>
-        </section> */}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

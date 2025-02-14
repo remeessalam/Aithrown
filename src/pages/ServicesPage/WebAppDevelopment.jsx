@@ -85,7 +85,27 @@ const WebAppDevelopment = () => {
           an increasingly competitive market.
         </p>
       </div>
-      <div className="">for asfasdfads</div>
+      {/* <div className="container mx-auto px-4 py-12">
+        <h2 className="text-3xl font-bold text-center mb-6">
+          {isWeb ? "Web Development Portfolio" : "App Development Portfolio"}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {selectedPortfolios.map((id, index) => (
+            <div
+              key={index}
+              className="relative w-full pt-[80%] rounded-lg overflow-hidden shadow-lg"
+            >
+              <iframe
+                src={`https://iframe.mediadelivery.net/embed/57031/${id}?autoplay=true&loop=true&muted=true&preload=true&responsive=true`}
+                loading="lazy"
+                className="absolute top-0 left-0 w-full h-full border-none"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ))}
+        </div>
+      </div> */}
     </div>
   );
 };
