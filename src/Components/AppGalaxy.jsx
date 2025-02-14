@@ -109,14 +109,14 @@ const AppGalaxy = () => {
     <div className="container mx-auto px-4">
       <div className="flex items-center justify-between py-8">
         <h1 className="text-5xl text-white font-medium">AppGalaxy</h1>
-        {selectedService && (
+        {/* {selectedService && (
           <button
             onClick={() => setSelectedService(null)}
             className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg transition-colors duration-200"
           >
             Back to AppGalaxy
           </button>
-        )}
+        )} */}
       </div>
       {/* {!selectedService ? ( */}
       <div className="grid md:grid-cols-2 gap-6 py-8">
