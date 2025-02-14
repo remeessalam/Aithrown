@@ -2,6 +2,7 @@ import { useState } from "react";
 import ReactPlayer from "react-player";
 import appdev from "../assets/appgalaxy/appdev.mp4";
 import webdev from "../assets/appgalaxy/webdev.mp4";
+
 //eslint-disable-next-line
 const Project = ({ paddingTop, src }) => (
   <div
@@ -11,13 +12,6 @@ const Project = ({ paddingTop, src }) => (
     <iframe
       src={src}
       loading="lazy"
-      // style={{
-      //   border: "none",
-      //   position: "absolute",
-      //   top: 0,
-      //   height: "100%",
-      //   width: "100%",
-      // }}
       allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
       allowFullScreen
     />
@@ -108,7 +102,8 @@ const services = [
 ];
 
 const AppGalaxy = () => {
-  const [selectedService, setSelectedService] = useState(null);
+  // Initialize with "app" to show app projects by default
+  const [selectedService, setSelectedService] = useState("app");
 
   return (
     <div className="container mx-auto px-4">
@@ -119,51 +114,56 @@ const AppGalaxy = () => {
             onClick={() => setSelectedService(null)}
             className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg transition-colors duration-200"
           >
-            Back to Services
+            Back to AppGalaxy
           </button>
         )}
       </div>
-
-      {!selectedService ? (
-        <div className="grid md:grid-cols-2 gap-6 py-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-xl cursor-pointer hover:transform hover:scale-105 transition-transform duration-300"
-              onClick={() => setSelectedService(service.type)}
-            >
-              <ReactPlayer
-                url={service.image}
-                loop
-                playsinline
-                playing
-                width="100%"
-                height="50vh"
-                muted
-                className="object-cover overflow-hidden !max-h-[60vh]"
-                config={{
-                  file: {
-                    attributes: {
-                      style: { objectFit: "cover", height: "50vh !important" },
-                    },
+      {/* {!selectedService ? ( */}
+      <div className="grid md:grid-cols-2 gap-6 py-8">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-xl cursor-pointer hover:transform hover:scale-105 transition-transform duration-300"
+            onClick={() => setSelectedService(service.type)}
+          >
+            <ReactPlayer
+              url={service.image}
+              loop
+              playsinline
+              playing
+              width="100%"
+              height="50vh"
+              muted
+              className="object-cover overflow-hidden !max-h-[60vh]"
+              config={{
+                file: {
+                  attributes: {
+                    style: { objectFit: "cover", height: "50vh !important" },
                   },
-                }}
-              />
-              <div className="p-6 bg-common">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="inline-block w-6 h-6 text-secondary">
-                    &lt;/&gt;
-                  </span>
-                  <h3 className="text-primary text-xl font-bold uppercase">
-                    {service.title}
-                  </h3>
-                </div>
-                <p className="text-secondary text-sm">{service.description}</p>
+                },
+              }}
+            />
+            <div className="p-6 bg-common">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-block w-6 h-6 text-secondary">
+                  &lt;/&gt;
+                </span>
+                <h3 className="text-primary text-xl font-bold uppercase">
+                  {service.title}
+                </h3>
               </div>
+              <p className="text-secondary text-sm">{service.description}</p>
             </div>
-          ))}
+          </div>
+        ))}
+      </div>
+      <div>
+        <div>
+          <h1 className="heading text-white text-center py-3">
+            {" "}
+            {selectedService === "web" ? "Web Project" : "App Project"}
+          </h1>
         </div>
-      ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
           {selectedService === "web"
             ? webProjects.map((project, index) => (
@@ -173,7 +173,7 @@ const AppGalaxy = () => {
                 <Project key={`app-${index}`} {...project} />
               ))}
         </div>
-      )}
+      </div>
     </div>
   );
 };
