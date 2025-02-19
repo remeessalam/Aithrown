@@ -6,6 +6,7 @@ import HomepageBanner from "./HomePageSection/HomepageBanner";
 import IndustriesWeServe from "./HomePageSection/IndustriesWeServe";
 import CompanyAchievements from "../Components/CompanyAchievements";
 import WhyChooseUs from "../Components/WhyChooseUs";
+import AwardsShowcase from "../Components/AwardsShowcase";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <CompanyAchievements />
       <IndustriesWeServe />
       <BestServicesSlider />
+      <AwardsShowcase />
       <WhyChooseUs />
       <GetInTouch />
     </div>
