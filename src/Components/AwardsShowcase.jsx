@@ -36,7 +36,7 @@ const AwardsShowcase = () => {
             {/* Content */}
             <div className="flex flex-col justify-center space-y-4">
               <h3 className="text-3xl font-bold text-white">
-                2023 Global Innovation Leader
+                2025 Global Innovation Leader
               </h3>
               <p className="text-white text-lg">
                 Honored for revolutionizing enterprise solutions with:
@@ -68,7 +68,7 @@ const AwardsShowcase = () => {
             </div>
             <div className="order-2 md:order-1 flex flex-col justify-center space-y-4">
               <h3 className="text-2xl font-bold text-white">
-                2022 IT Excellence Champion
+                IT Excellence Champion
               </h3>
               <p className="text-white leading-relaxed">
                 Recognized for delivering cutting-edge solutions to 150+
@@ -101,7 +101,7 @@ const AwardsShowcase = () => {
             </div>
             <div className="flex flex-col justify-center space-y-4">
               <h3 className="text-2xl font-bold text-white">
-                AI Innovation Pioneer 2021
+                AI Innovation Pioneer
               </h3>
               <p className="text-white leading-relaxed">
                 Awarded for developing industry-leading AI solutions that helped
@@ -139,7 +139,7 @@ const AwardsShowcase = () => {
               </div>
               <div className="p-8 lg:col-span-2 flex flex-col justify-center">
                 <h3 className="text-2xl font-bold mb-4">
-                  Cloud Solutions Excellence 2020
+                  Cloud Solutions Excellence
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
