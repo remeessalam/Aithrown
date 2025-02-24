@@ -1,7 +1,7 @@
 import image from "../assets/awards/award.jpg";
 import image1 from "../assets/awards/award1.jpg";
 import image2 from "../assets/awards/award2.jpg";
-// import image3 from "../assets/awards/award3.jpg";
+import awardimage from "../assets/awards/awardimage.jpg";
 import image4 from "../assets/awards/award4.jpg";
 
 const AwardsShowcase = () => {
@@ -20,7 +20,13 @@ const AwardsShowcase = () => {
           in transforming the IT landscape through innovation and client-centric
           solutions.
         </p>
-
+        <div className="flex justify-center w-full p-8">
+          <img
+            src={awardimage}
+            alt="award-image"
+            className="max-h-[30rem] w-fit"
+          />
+        </div>
         {/* Awards Section */}
         <div className="space-y-12">
           {/* Horizontal Image Award (Special Layout) */}
