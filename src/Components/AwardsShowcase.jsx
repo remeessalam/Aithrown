@@ -30,7 +30,7 @@ const AwardsShowcase = () => {
         </h2>
 
         {/* Description */}
-        <p className="text-lg text-white text-center max-w-3xl mx-auto mb-12">
+        <p className="text-lg text-white text-center max-w-3xl mx-auto sm:mb-12">
           Our commitment to excellence has earned us recognition from industry
           leaders. Explore our prestigious accolades that showcase our journey
           in transforming the IT landscape through innovation and client-centric
