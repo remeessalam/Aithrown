@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import image from "../assets/awards/award.jpg";
 import image1 from "../assets/awards/award1.jpg";
 import image2 from "../assets/awards/award2.jpg";
@@ -5,8 +6,23 @@ import awardimage from "../assets/awards/awardimage.jpg";
 import image4 from "../assets/awards/award4.jpg";
 
 const AwardsShowcase = () => {
+  // Images array for the slider
+  const sliderImages = [awardimage, image, image1, image2, image4];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === sliderImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(intervalId);
+  }, [sliderImages.length]);
+
   return (
-    <section className=" py-16">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-center text-white mb-6">
@@ -20,17 +36,50 @@ const AwardsShowcase = () => {
           in transforming the IT landscape through innovation and client-centric
           solutions.
         </p>
-        <div className="flex justify-center w-full p-8">
-          <img
-            src={awardimage}
-            alt="award-image"
-            className="max-h-[30rem] w-fit"
-          />
+
+        {/* Image Slider */}
+        <div className="relative flex justify-center w-full p-8 ">
+          <div className="relative w-full max-w-4xl overflow-hidden rounded-xl">
+            {/* Image container with transition */}
+            <div className="relative h-96">
+              {sliderImages.map((img, index) => (
+                <div
+                  key={index}
+                  className="absolute w-full h-full transition-opacity duration-1000 ease-in-out"
+                  style={{
+                    opacity: currentImageIndex === index ? 1 : 0,
+                    zIndex: currentImageIndex === index ? 10 : 0,
+                  }}
+                >
+                  <img
+                    src={img}
+                    alt={`award-image-${index}`}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Navigation dots */}
+          </div>
         </div>
-        {/* Awards Section */}
-        <div className="space-y-12">
+        <div className="absolute  left-0 z-50  right-0 flex justify-center space-x-2 pb-12">
+          {sliderImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-3 h-3 rounded-full bg-white z-50 ${
+                currentImageIndex === index ? "bg-white" : "bg-gray-400"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Awards Section - All content below remains unchanged */}
+        <div className="space-y-12 mt-12">
           {/* Horizontal Image Award (Special Layout) */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8  p-8 rounded-2xl shadow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8 rounded-2xl shadow-lg">
             {/* Image takes 2 columns on desktop */}
             <div className="lg:col-span-2">
               <img
@@ -47,7 +96,7 @@ const AwardsShowcase = () => {
               <p className="text-white text-lg">
                 Honored for revolutionizing enterprise solutions with:
               </p>
-              <ul className="list-disc pl-6 space-y-2  text-white">
+              <ul className="list-disc pl-6 space-y-2 text-white">
                 <li>AI-powered automation platforms</li>
                 <li>Blockchain security integrations</li>
                 <li>Cloud-native architecture designs</li>
@@ -127,9 +176,6 @@ const AwardsShowcase = () => {
                   <span>30 patents filed</span>
                 </div>
               </div>
-              {/* <button className="self-start mt-4 px-6 py-2 bg-white text-black rounded-full hover:bg-blue-800 transition-colors">
-                View Case Studies →
-              </button> */}
             </div>
           </div>
 
