@@ -79,13 +79,13 @@ const AwardsShowcase = () => {
         {/* Awards Section - All content below remains unchanged */}
         <div className="space-y-12 mt-12">
           {/* Horizontal Image Award (Special Layout) */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8 rounded-2xl shadow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 rounded-2xl shadow-lg">
             {/* Image takes 2 columns on desktop */}
-            <div className="lg:col-span-2">
+            <div className="">
               <img
                 src={image}
                 alt="Innovation Award"
-                className="w-full max-h-[80vh] object-cover rounded-xl shadow-md"
+                className="w-full max-h-[80vh]  rounded-xl shadow-md"
               />
             </div>
             {/* Content */}
@@ -123,7 +123,7 @@ const AwardsShowcase = () => {
             </div>
             <div className="order-2 md:order-1 flex flex-col justify-center space-y-4">
               <h3 className="text-2xl font-bold text-white">
-                IT Excellence Champion
+                Receiving an award from FreshToHome Co-founder Mathew Joseph.
               </h3>
               <p className="text-white leading-relaxed">
                 Recognized for delivering cutting-edge solutions to 150+
