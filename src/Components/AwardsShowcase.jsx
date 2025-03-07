@@ -117,7 +117,7 @@ const AwardsShowcase = () => {
               <img
                 src={image1}
                 alt="IT Excellence Award"
-                className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-90 object-cover transform group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent" />
             </div>

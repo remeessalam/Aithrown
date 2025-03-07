@@ -68,6 +68,7 @@ import blog27 from "./assets/blogs/blog27.jpg";
 import blog28 from "./assets/blogs/blog28.jpg";
 import blog29 from "./assets/blogs/blog29.jpg";
 import blog30 from "./assets/blogs/blog30.jpg";
+import blog31 from "./assets/blogs/blog31.jpg";
 export const clientDetails = {
   phone: "+91-8547203254",
   whatsappbox: "8547203254",
@@ -633,6 +634,11 @@ export const blogsLinks = [
     image: blog30,
     link: "https://aithrown.blogspot.com/2025/01/case-studies-and-success-stories-how.html",
     desc: "In the dynamic world of e-commerce, staying ahead of the competition requires innovation, agility, and the ability to leverage advanced technology. One of the most iconic success stories in this domain is Amazon's groundbreaking use of AI-powered recommendations, which has revolutionized the way consumers shop and businesses grow. At Aithrown, we specialize in delivering AI-driven solutions to help businesses achieve similar success.",
+  },
+  {
+    image: blog31,
+    link: "https://aithrown.blogspot.com/2025/03/how-ai-can-boost-sales-in-e-commerce.html",
+    desc: "E-commerce businesses are leveraging Artificial Intelligence (AI) to enhance customer experience, optimize operations, and drive higher sales. AI-powered solutions like chatbots, personalized recommendations, dynamic pricing, and predictive analytics are transforming how online stores attract and retain customers.",
   },
 ];
 
