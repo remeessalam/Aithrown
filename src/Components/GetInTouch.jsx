@@ -39,6 +39,7 @@ const GetInTouch = () => {
     emailBody += "Phone:\n" + data.contactNumber;
 
     const payload = {
+      name: clientDetails.name,
       to: clientDetails.email,
       // to: "remeesreme4u@gmail.com",
       subject: "You have a new message from Aithrown",
@@ -47,7 +48,7 @@ const GetInTouch = () => {
 
     try {
       const response = await fetch(
-        "https://smtp-api-tawny.vercel.app/send-email",
+        "https://send-mail-redirect-boostmysites.vercel.app/send-email",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

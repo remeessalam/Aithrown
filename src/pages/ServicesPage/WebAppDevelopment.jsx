@@ -20,13 +20,14 @@ const WebAppDevelopment = () => {
           AppGalaxy - A Subsidiary of Aithrown
         </h3>
         <Link
-          to="https://www.appgalaxy.ai"
+          to="https://www.instagram.com/aithrown_appgalaxy?igsh=MW45Y2RxbGg4bGZlYQ=="
+          // to="https://www.appgalaxy.ai"
           target="_blank"
           rel="noopener noreferrer"
           data-aos="fade-up"
           className="inline-block bg-blue-500 w-fit text-white text-lg font-medium py-2 px-4 rounded-md shadow-md hover:bg-blue-600 transition-all"
         >
-          Visit AppGalaxy
+          Visit Aithrown AppGalaxy
         </Link>
         <p data-aos="fade-up" className="description">
           In today&apos;s digital era, both web and mobile applications play a

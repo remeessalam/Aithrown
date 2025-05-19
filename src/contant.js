@@ -70,6 +70,7 @@ import blog29 from "./assets/blogs/blog29.jpg";
 import blog30 from "./assets/blogs/blog30.jpg";
 import blog31 from "./assets/blogs/blog31.jpg";
 export const clientDetails = {
+  name: "Aithrown",
   phone: "+91-8547203254",
   whatsappbox: "8547203254",
   email: "contactaithrown@gmail.com",
