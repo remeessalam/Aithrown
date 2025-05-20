@@ -25,6 +25,11 @@ const GetInTouch = () => {
   const onSubmit = async (data) => {
     setSending(true);
     // No need to validate email manually here
+    if (!captchaAnswer) {
+      toast.error("Please Enter CAPTCHA");
+      setSending(false);
+      return;
+    }
     if (parseInt(captchaAnswer) !== correctAnswer) {
       toast.error("Incorrect CAPTCHA answer");
       setSending(false);
