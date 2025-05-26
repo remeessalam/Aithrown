@@ -8,14 +8,6 @@ const HomepageBanner = () => {
 
   return (
     <div className="relative min-h-screen flex justify-center items-center">
-      {!isVideoReady && (
-        <img
-          src={bannerthumbnail}
-          alt="Video thumbnail"
-          className="absolute top-0 left-0 w-full h-screen object-cover z-0"
-        />
-      )}
-
       {/* Background overlay */}
       <div className="absolute top-0 h-screen w-full  bg-black">
         <ReactPlayer
@@ -42,8 +34,14 @@ const HomepageBanner = () => {
           }}
         />
       </div>
+      {!isVideoReady && (
+        <img
+          src={bannerthumbnail}
+          alt="Video thumbnail"
+          className="absolute top-0 left-0 w-full h-screen object-cover "
+        />
+      )}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-black/30" />
-
       {/* Hero content */}
       <div className="relative flex flex-col items-center  wrapper">
         <div className="text-center sm:text-left">
