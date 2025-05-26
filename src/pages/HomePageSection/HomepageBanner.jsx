@@ -9,37 +9,39 @@ const HomepageBanner = () => {
   return (
     <div className="relative min-h-screen flex justify-center items-center">
       {/* Background overlay */}
-      <div className="absolute top-0 h-screen w-full  bg-black">
-        <ReactPlayer
-          url={video}
-          loop={true}
-          playsinline
-          playing={true}
-          width="100%"
-          height="100vh"
-          muted
-          className=" object-cover"
-          onReady={() => setIsVideoReady(true)}
-          onError={() => setIsVideoReady(false)}
-          config={{
-            file: {
-              attributes: {
-                style: {
-                  objectFit: "cover",
-                  width: "100vw",
-                  height: "100vh",
-                },
-              },
-            },
-          }}
-        />
-      </div>
-      {!isVideoReady && (
+
+      {!isVideoReady ? (
         <img
           src={bannerthumbnail}
           alt="Video thumbnail"
           className="absolute top-0 left-0 w-full h-screen object-cover "
         />
+      ) : (
+        <div className="absolute top-0 h-screen w-full  bg-black">
+          <ReactPlayer
+            url={video}
+            loop={true}
+            playsinline
+            playing={true}
+            width="100%"
+            height="100vh"
+            muted
+            className=" object-cover"
+            onReady={() => setIsVideoReady(true)}
+            onError={() => setIsVideoReady(false)}
+            config={{
+              file: {
+                attributes: {
+                  style: {
+                    objectFit: "cover",
+                    width: "100vw",
+                    height: "100vh",
+                  },
+                },
+              },
+            }}
+          />
+        </div>
       )}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-black/30" />
       {/* Hero content */}
