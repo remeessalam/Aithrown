@@ -1,9 +1,21 @@
 import ReactPlayer from "react-player";
 import video from "../../assets/video/homeBanner.mp4";
+import bannerthumbnail from "../../assets/video/bannerthumbnail.webp";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const HomepageBanner = () => {
+  const [isVideoReady, setIsVideoReady] = useState(false);
+
   return (
     <div className="relative min-h-screen flex justify-center items-center">
+      {!isVideoReady && (
+        <img
+          src={bannerthumbnail}
+          alt="Video thumbnail"
+          className="absolute top-0 left-0 w-full h-screen object-cover z-0"
+        />
+      )}
+
       {/* Background overlay */}
       <div className="absolute top-0 h-screen w-full  bg-black">
         <ReactPlayer
@@ -15,6 +27,8 @@ const HomepageBanner = () => {
           height="100vh"
           muted
           className=" object-cover"
+          onReady={() => setIsVideoReady(true)}
+          onError={() => setIsVideoReady(false)}
           config={{
             file: {
               attributes: {

@@ -69,6 +69,7 @@ import blog28 from "./assets/blogs/blog28.jpg";
 import blog29 from "./assets/blogs/blog29.jpg";
 import blog30 from "./assets/blogs/blog30.jpg";
 import blog31 from "./assets/blogs/blog31.jpg";
+import blog32 from "./assets/blogs/blog32.png";
 export const clientDetails = {
   name: "Aithrown",
   phone: "+91-8547203254",
@@ -640,6 +641,11 @@ export const blogsLinks = [
     image: blog31,
     link: "https://aithrown.blogspot.com/2025/03/how-ai-can-boost-sales-in-e-commerce.html",
     desc: "E-commerce businesses are leveraging Artificial Intelligence (AI) to enhance customer experience, optimize operations, and drive higher sales. AI-powered solutions like chatbots, personalized recommendations, dynamic pricing, and predictive analytics are transforming how online stores attract and retain customers.",
+  },
+  {
+    image: blog32,
+    link: "https://aithrown.blogspot.com/2025/05/why-satya-nadellas-shift-from-podcasts.html",
+    desc: "In a recent TechCrunch article, Microsoft CEO Satya Nadella revealed that he has started replacing podcasts with interactive AI chatbot sessions using Microsoft's Copilot. Instead of listening passively during his commute, he now uploads podcast transcripts and converses with the content — asking questions, diving deeper, and getting instant, tailored responses.",
   },
 ];
 
