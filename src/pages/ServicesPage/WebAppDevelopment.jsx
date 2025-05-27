@@ -20,7 +20,7 @@ const WebAppDevelopment = () => {
           AppGalaxy - A Subsidiary of Aithrown
         </h3> */}
         <Link
-          to="https://www.instagram.com/aithrown_appgalaxy?igsh=MW45Y2RxbGg4bGZlYQ=="
+          to="https://www.instagram.com/aithrown_official?igsh=MW45Y2RxbGg4bGZlYQ=="
           // to="https://www.appgalaxy.ai"
           target="_blank"
           rel="noopener noreferrer"
