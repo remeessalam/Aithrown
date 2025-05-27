@@ -16,9 +16,9 @@ const WebAppDevelopment = () => {
         <h2 data-aos="fade-up" className="text-3xl font-semibold">
           Web & App Development
         </h2>
-        <h3 data-aos="fade-up" className="text-xl font-medium mt-2">
+        {/* <h3 data-aos="fade-up" className="text-xl font-medium mt-2">
           AppGalaxy - A Subsidiary of Aithrown
-        </h3>
+        </h3> */}
         <Link
           to="https://www.instagram.com/aithrown_appgalaxy?igsh=MW45Y2RxbGg4bGZlYQ=="
           // to="https://www.appgalaxy.ai"
@@ -27,7 +27,7 @@ const WebAppDevelopment = () => {
           data-aos="fade-up"
           className="inline-block bg-blue-500 w-fit text-white text-lg font-medium py-2 px-4 rounded-md shadow-md hover:bg-blue-600 transition-all"
         >
-          Visit Aithrown AppGalaxy
+          Visit Aithrown Instagram
         </Link>
         <p data-aos="fade-up" className="description">
           In today&apos;s digital era, both web and mobile applications play a

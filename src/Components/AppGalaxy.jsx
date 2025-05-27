@@ -108,7 +108,7 @@ const AppGalaxy = () => {
   return (
     <div className="container mx-auto px-4">
       <div className="flex items-center justify-between py-8">
-        <h1 className="text-5xl text-white font-medium">AppGalaxy</h1>
+        {/* <h1 className="text-5xl text-white font-medium">AppGalaxy</h1> */}
         {/* {selectedService && (
           <button
             onClick={() => setSelectedService(null)}
