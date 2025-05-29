@@ -101,7 +101,7 @@ const AppGalaxy = () => {
         )} */}
       </div>
       {/* {!selectedService ? ( */}
-      <div className="grid md:grid-cols-2 gap-6 py-8">
+      {/* <div className="grid md:grid-cols-2 gap-6 py-8">
         {services.map((service, index) => (
           <div
             key={index}
@@ -138,22 +138,23 @@ const AppGalaxy = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
       <div>
         <div>
-          <h1 className="heading text-white text-center py-3">
-            {" "}
-            {selectedService === "web" ? "Web Project" : "App Project"}
-          </h1>
+          <h1 className="heading text-white text-center py-3">Web Project</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
-          {selectedService === "web"
-            ? webProjects.map((project, index) => (
-                <Project key={`web-${index}`} {...project} />
-              ))
-            : appProjects.map((project, index) => (
-                <Project key={`app-${index}`} {...project} />
-              ))}
+          {webProjects.map((project, index) => (
+            <Project key={`app-${index}`} {...project} />
+          ))}
+        </div>
+        <div>
+          <h1 className="heading text-white text-center py-3">App Project</h1>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+          {appProjects.map((project, index) => (
+            <Project key={`app-${index}`} {...project} />
+          ))}
         </div>
       </div>
     </div>
