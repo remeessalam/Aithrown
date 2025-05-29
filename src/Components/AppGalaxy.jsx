@@ -11,43 +11,73 @@ import appvideoone from "../assets/video/workvideos/app-1.mp4";
 import appvideotwo from "../assets/video/workvideos/app-2.mp4";
 import appvideothree from "../assets/video/workvideos/app-3.mp4";
 
+import webimgone from "../assets/video/workvideos/web-1.webp";
+import webimgtwo from "../assets/video/workvideos/web-2.webp";
+import webimgthree from "../assets/video/workvideos/web-3.webp";
+
+import appimgone from "../assets/video/workvideos/app-1.webp";
+import appimgtwo from "../assets/video/workvideos/app-2.webp";
+import appimgthree from "../assets/video/workvideos/app-3.webp";
+
 //eslint-disable-next-line
-const Project = ({ paddingTop, src }) => (
-  <div
-    style={{ position: "relative" }}
-    className="border min-h-[30rem] py-10 px-4 flex justify-center "
-  >
-    <ReactPlayer
-      url={src}
-      playing
-      loop
-      muted
-      playsinline
-      width="100%"
-      height="100%"
-      config={{
-        file: {
-          attributes: {
-            style: { objectFit: "cover", width: "100%", height: "100%" },
+const Project = ({ paddingTop, src, thumb }) => {
+  const [isVideoReady, setIsVideoReady] = useState(false);
+  return (
+    <div
+      style={{ position: "relative" }}
+      className="border min-h-[30rem] py-10 px-4 flex justify-center "
+    >
+      {" "}
+      {!isVideoReady && (
+        <img
+          src={thumb}
+          alt="Thumbnail"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      )}
+      <ReactPlayer
+        url={src}
+        playing
+        loop
+        muted
+        playsinline
+        width="100%"
+        height="100%"
+        onReady={() => setIsVideoReady(true)}
+        config={{
+          file: {
+            attributes: {
+              style: { objectFit: "cover", width: "100%", height: "100%" },
+            },
           },
-        },
-      }}
-    />
-  </div>
-);
+        }}
+      />
+    </div>
+  );
+};
 
 const webProjects = [
   {
     paddingTop: "80.25%",
     src: webvideoone,
+    thumb: webimgone,
   },
   {
     paddingTop: "80.25%",
     src: webvideotwo,
+    thumb: webimgtwo,
   },
   {
     paddingTop: "80.77777777777777%",
     src: webvideothree,
+    thumb: webimgthree,
   },
 ];
 
@@ -55,14 +85,17 @@ const appProjects = [
   {
     paddingTop: "75%",
     src: appvideoone,
+    thumb: appimgone,
   },
   {
     paddingTop: "75%",
     src: appvideotwo,
+    thumb: appimgtwo,
   },
   {
     paddingTop: "100%",
     src: appvideothree,
+    thumb: appimgthree,
   },
 ];
 
