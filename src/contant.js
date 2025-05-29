@@ -76,6 +76,7 @@ export const clientDetails = {
   whatsappbox: "8547203254",
   email: "contactaithrown@gmail.com",
   address: "Kerala, India",
+  displaymail: "contact@aithrown.com",
 };
 
 export const navItems = [

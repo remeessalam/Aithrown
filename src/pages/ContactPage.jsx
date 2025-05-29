@@ -1,6 +1,7 @@
 import map from "../assets/map.jpg";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaMapLocationDot } from "react-icons/fa6";
+import { IoMailOpen } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import PageBanner from "../Components/PageBanner";
 import GetInTouch from "../Components/GetInTouch";
@@ -27,7 +28,15 @@ const ContactUs = () => {
               </div>
               <p className="sm:text-lg font-medium">{clientDetails.phone}</p>
             </Link>
-            <div className="flex gap-3 mt-7 w-fit">
+            <div className="flex gap-3 items-center mt-7 w-fit">
+              <div className="w-[3.5rem] h-[3.5rem] bg-white/20 rounded-full p-3 flex justify-center items-center">
+                <IoMailOpen className="text-3xl" />
+              </div>
+              <p className="sm:text-lg font-medium max-w-[35rem]">
+                {clientDetails.displaymail}
+              </p>
+            </div>
+            <div className="flex gap-3 items-center mt-7 w-fit">
               <div className="w-[3.5rem] h-[3.5rem] bg-white/20 rounded-full p-3 flex justify-center items-center">
                 <FaMapLocationDot className="text-3xl" />
               </div>
