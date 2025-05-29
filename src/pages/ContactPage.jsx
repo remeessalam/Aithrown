@@ -28,14 +28,17 @@ const ContactUs = () => {
               </div>
               <p className="sm:text-lg font-medium">{clientDetails.phone}</p>
             </Link>
-            <div className="flex gap-3 items-center mt-7 w-fit">
+            <Link
+              to={`mailto:${clientDetails.displaymail}`}
+              className="flex gap-3 items-center mt-7 w-fit"
+            >
               <div className="w-[3.5rem] h-[3.5rem] bg-white/20 rounded-full p-3 flex justify-center items-center">
                 <IoMailOpen className="text-3xl" />
               </div>
               <p className="sm:text-lg font-medium max-w-[35rem]">
                 {clientDetails.displaymail}
               </p>
-            </div>
+            </Link>
             <div className="flex gap-3 items-center mt-7 w-fit">
               <div className="w-[3.5rem] h-[3.5rem] bg-white/20 rounded-full p-3 flex justify-center items-center">
                 <FaMapLocationDot className="text-3xl" />
