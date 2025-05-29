@@ -118,8 +118,7 @@ export const allServices = [
     link: "/services/web-app-development",
     smallPara:
       "In today's interconnected world, web and mobile applications have become an integral part of our daily lives, transforming the way we communicate, consume information, and conduct business. From e-commerce platforms to mobile apps, these digital tools are essential for driving user engagement and meeting business goals.\n\n" +
-      "Web application development involves crafting responsive and visually appealing interfaces (front-end) while ensuring robust and scalable server-side functionalities (back-end). Similarly, mobile app development requires platform-specific expertise, creating unique experiences for iOS and Android users while adhering to the technical demands of each platform. Together, web and app development form the backbone of modern digital ecosystems, offering tailored solutions to meet user needs and deliver impactful results.\n\n" +
-      "AppGalaxy, a subsidiary of Aithrown, focuses on delivering premium website and app development services. With a commitment to excellence, AppGalaxy ensures that every digital solution is designed to provide seamless user experiences and drive business growth.",
+      "Web application development involves crafting responsive and visually appealing interfaces (front-end) while ensuring robust and scalable server-side functionalities (back-end). Similarly, mobile app development requires platform-specific expertise, creating unique experiences for iOS and Android users while adhering to the technical demands of each platform. Together, web and app development form the backbone of modern digital ecosystems, offering tailored solutions to meet user needs and deliver impactful results.\n\n",
   },
 
   {

@@ -41,7 +41,11 @@ const Footer = () => {
             <Link to={"https://aithrown.blogspot.com/?m=1"}>
               <FaBlogger className="text-2xl" />
             </Link>
-            <Link>
+            <Link
+              to={
+                "https://www.instagram.com/aithrown_official?igsh=MW45Y2RxbGg4bGZlYQ=="
+              }
+            >
               <AiFillInstagram className="text-2xl" />
             </Link>
             <Link>
