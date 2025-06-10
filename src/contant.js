@@ -20,6 +20,7 @@ import client1 from "./assets/client-1.png";
 import client2 from "./assets/client-2.png";
 import client3 from "./assets/client-3.png";
 import client4 from "./assets/client-4.png";
+import client5 from "./assets/client-5.png";
 
 import service1 from "./assets/service1.png";
 // import service2 from "./assets/service2.png";
@@ -401,13 +402,17 @@ export const clients = [
     id: 4,
     img: client4,
   },
+  {
+    id: 5,
+    img: client5,
+  },
 ];
 
 export const faqItems = [
   {
     id: 1,
     question: "How can I get in touch with Aithrown.?",
-    answer: `You can reach out to us through the contact form on this page, or by emailing us directly at contactaithrown@gmail.com. Alternatively, you can also call us at +91-8547203254 for immediate assistance.`,
+    answer: `You can reach out to us through the contact form on this page, or by emailing us directly at contact@aithrown.com. Alternatively, you can also call us at +91-8547203254 for immediate assistance.`,
   },
   {
     id: 2,
@@ -436,7 +441,7 @@ export const faqItems = [
   {
     id: 4,
     question: "How do I schedule a consultation or meeting with Aithrown.?",
-    answer: `You can schedule a meeting by filling out the contact form on this page or by sending us an email at <strong>contactaithrown@gmail.com</strong>. We’ll get back to you with available time slots.`,
+    answer: `You can schedule a meeting by filling out the contact form on this page or by sending us an email at contact@aithrown.com. We’ll get back to you with available time slots.`,
   },
   {
     id: 5,

@@ -28,12 +28,8 @@ const AboutusPage = () => {
             <br /> We understand that every business is unique, which is why our
             approach is tailored to your specific needs and challenges,
             delivering customized solutions that drive impactful, measurable
-            results. Our subsidiary, Appgalaxy, specializes in delivering
-            cutting-edge website and app development services. Together, as a
-            cohesive unit, Aithrown and Appgalaxy provide a comprehensive suite
-            of services designed to propel your business to new heights. Trust
-            in our commitment to quality, excellence, and innovation—experience
-            the future with Aithrown
+            results. Trust in our commitment to quality, excellence, and
+            innovation—experience the future with Aithrown.
           </p>
         </div>
         <img
