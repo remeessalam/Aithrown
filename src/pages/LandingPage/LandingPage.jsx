@@ -2,6 +2,7 @@ import React from "react";
 import GetInTouch from "../../Components/GetInTouch";
 import logo from "../../assets/logo/logo.png";
 import landingpagebanner from "../../assets/landingpagebanner.jpg";
+import landingpagebannervertical from "../../assets/landingpagebannervertical.jpg";
 const LandingPage = () => {
   // Updated color palette to match Tailwind config
   const colors = {
@@ -324,13 +325,19 @@ const LandingPage = () => {
 
       {/* Hero */}
       <section
-        className="relative flex justify-center items-center  pb-24 px-6 overflow-hidden sm:pt-0 pt-20 sm:h-screen bg-current bg-cover bg-top bg-no-repeat"
+        className="relative flex justify-center items-center  pb-24 px-6 overflow-hidden sm:pt-0 pt-20 h-screen bg-current bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage: `url(${landingpagebanner})`,
 
           //   background: `linear-gradient(to right, ${colors.secondary}, #1a1a1a)`,
         }}
       >
+        <div
+          className="absolute inset-0 sm:hidden bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${landingpagebannervertical})`,
+          }}
+        />
         <div className="absolute inset-0 opacity-10">
           <div className="grid grid-cols-4 gap-8 w-full h-full">
             {[...Array(16)].map((_, i) => (
