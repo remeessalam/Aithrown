@@ -14,6 +14,7 @@ import CloudSolutions from "./pages/ServicesPage/CloudSolutions";
 import CyberSecurity from "./pages/ServicesPage/CyberSecurity";
 import { Toaster } from "react-hot-toast";
 import BlogPage from "./pages/BlogPage";
+import LandingPage from "./pages/LandingPage/LandingPage";
 // import ServicePageLayout from "./Layout/ServicePageLayout";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -119,6 +120,7 @@ const AppRouter = createBrowserRouter([
       },
     ],
   },
+  { path: "/healthcare", element: <LandingPage /> }, // Landing page route
 ]);
 
 export default AppRouter;
