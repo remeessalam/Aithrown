@@ -324,7 +324,7 @@ const LandingPage = () => {
 
       {/* Hero */}
       <section
-        className="relative flex justify-center items-center  pb-24 px-6 overflow-hidden h-screen bg-current bg-cover bg-top bg-no-repeat"
+        className="relative flex justify-center items-center  pb-24 px-6 overflow-hidden sm:pt-0 pt-20 sm:h-screen bg-current bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage: `url(${landingpagebanner})`,
 
